@@ -1,6 +1,6 @@
 -- using 1365545250 as a seed to the RNG
 
-
+set enable_result_cache_for_session to off;
 select
 	n_name,
 	sum(l_extendedprice * (1 - l_discount)) as revenue

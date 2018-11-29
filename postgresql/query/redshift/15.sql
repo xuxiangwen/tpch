@@ -1,5 +1,6 @@
 -- using 1365545250 as a seed to the RNG
 
+set enable_result_cache_for_session to off;
 create view revenue0 (supplier_no, total_revenue) as
 	select
 		l_suppkey,
