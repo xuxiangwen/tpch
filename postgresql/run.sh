@@ -11,7 +11,11 @@ db_type=${3:-postgresql}
 db_password=${4:-tpch}
 db_port=${5:-5432}
 query_id=${6}
-query_path=$script_path/query
+if [ "$db_type" = "redshift" ] ; then
+  query_path=$script_path/redshift/query
+else
+  query_path=$script_path/query
+fi
 output_path=$script_path/tpch.csv
 log_path=$script_path/tpch.log
 
