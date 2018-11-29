@@ -12,7 +12,7 @@ db_password=${4:-tpch}
 db_port=${5:-5432}
 query_id=${6}
 if [ "$db_type" = "redshift" ] ; then
-  query_path=$script_path/redshift/query
+  query_path=$script_path/query/redshift
 else
   query_path=$script_path/query
 fi
