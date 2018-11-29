@@ -1,0 +1,15 @@
+**运行所有query**
+./run.sh aa00 tpch_1g postgresql
+
+**运行一个query**
+./run.sh aa00 tpch_1g postgresql 3
+
+**查看结果**
+cat tpch.out
+
+**archive log和out**
+./archive.sh
+
+**重新启动mysql**
+最好在每次测试前，重新启动mysql
+docker restart postgresql1  #如果mysql部署在docker里面，mysql1是容器名字
