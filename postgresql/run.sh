@@ -9,7 +9,8 @@ server=${1:-aa00}
 database=${2:-tpch_1g}
 db_type=${3:-postgresql}
 db_password=${4:-tpch}
-query_id=${5}
+db_port=${5:-5432}
+query_id=${6}
 query_path=$script_path/query
 output_path=$script_path/tpch.csv
 log_path=$script_path/tpch.log
@@ -32,7 +33,7 @@ while [ $i -lt $n ]
 do
   echo '-------------------------------------------------------' | tee -a $log_path   
   echo `date +%Y-%m-%d-%H:%M:%S`: run query $i | tee -a $log_path
-  elasped_time="$(time (PGPASSWORD=$db_password psql -h $server -U tpch -d $database -f $query_path/$i.sql >> $log_path) 2>&1 )"
+  elasped_time="$(time (PGPASSWORD=$db_password psql -h $server -U tpch -d $database -p $db_port -f $query_path/$i.sql >> $log_path) 2>&1 )"
   echo `date +%Y-%m-%d-%H:%M:%S`: elaspe_time = $elasped_time seconds | tee -a $log_path
   echo "$test_time,$database,$db_type,$i,$elasped_time" >> $output_path
   i=`expr $i + 1`
