@@ -379,3 +379,103 @@ LINE 11:    customer
 2018-11-28-21:03:13,tpch_1g,postgresql,20,0.852
 2018-11-28-21:03:13,tpch_1g,postgresql,21,0.968
 2018-11-28-21:03:13,tpch_1g,postgresql,22,0.184
+2018-11-29-16:53:23,tpch_1g,redshift,1,psql: could not connect to server: Connection timed out
+	Is the server running on host "csswechat-test.cgqrfxjfcncp.cn-northwest-1.redshift.amazonaws.com.cn" (172.31.101.141) and accepting
+	TCP/IP connections on port 5432?
+127.337
+2018-11-29-17:07:02,tpch_1g,redshift,1,7.767
+2018-11-29-17:07:02,tpch_1g,redshift,2,34.878
+2018-11-29-17:07:02,tpch_1g,redshift,3,13.958
+2018-11-29-17:07:02,tpch_1g,redshift,4,psql:/home/xu6/tpch/postgresql/query/4.sql:24: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.030
+2018-11-29-17:07:02,tpch_1g,redshift,5,23.520
+2018-11-29-17:07:02,tpch_1g,redshift,6,5.534
+2018-11-29-17:07:02,tpch_1g,redshift,7,26.366
+2018-11-29-17:07:02,tpch_1g,redshift,8,18.158
+2018-11-29-17:07:02,tpch_1g,redshift,9,14.789
+2018-11-29-17:07:02,tpch_1g,redshift,10,15.290
+2018-11-29-17:07:02,tpch_1g,redshift,11,12.069
+2018-11-29-17:07:02,tpch_1g,redshift,12,10.585
+2018-11-29-17:07:02,tpch_1g,redshift,13,14.609
+2018-11-29-17:07:02,tpch_1g,redshift,14,11.117
+2018-11-29-17:07:02,tpch_1g,redshift,15,18.618
+2018-11-29-17:07:02,tpch_1g,redshift,16,17.255
+2018-11-29-17:07:02,tpch_1g,redshift,17,14.358
+2018-11-29-17:07:02,tpch_1g,redshift,18,20.596
+2018-11-29-17:07:02,tpch_1g,redshift,19,6.980
+2018-11-29-17:07:02,tpch_1g,redshift,20,psql:/home/xu6/tpch/postgresql/query/20.sql:40: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+6.958
+2018-11-29-17:07:02,tpch_1g,redshift,21,44.235
+2018-11-29-17:07:02,tpch_1g,redshift,22,15.410
+2018-11-29-18:19:11,tpch_1g,redshift,1,0.022
+2018-11-29-18:19:11,tpch_1g,redshift,2,0.018
+2018-11-29-18:19:11,tpch_1g,redshift,3,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,4,psql:/home/xu6/tpch/postgresql/query/4.sql:24: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.028
+2018-11-29-18:19:11,tpch_1g,redshift,5,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,6,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,7,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,8,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,9,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,10,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,11,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,12,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,13,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,14,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,15,1.477
+2018-11-29-18:19:11,tpch_1g,redshift,16,0.080
+2018-11-29-18:19:11,tpch_1g,redshift,17,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,18,0.015
+2018-11-29-18:19:11,tpch_1g,redshift,19,0.016
+2018-11-29-18:19:11,tpch_1g,redshift,20,psql:/home/xu6/tpch/postgresql/query/20.sql:40: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.096
+2018-11-29-18:19:11,tpch_1g,redshift,21,0.017
+2018-11-29-18:19:11,tpch_1g,redshift,22,0.016
+2018-11-29-23:45:53,tpch_3g,redshift,1,5.500
+2018-11-29-23:45:53,tpch_3g,redshift,2,4.512
+2018-11-29-23:45:53,tpch_3g,redshift,3,2.120
+2018-11-29-23:45:53,tpch_3g,redshift,4,psql:/home/xu6/tpch/postgresql/query/4.sql:24: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.030
+2018-11-29-23:45:53,tpch_3g,redshift,5,2.174
+2018-11-29-23:45:53,tpch_3g,redshift,6,0.781
+2018-11-29-23:45:53,tpch_3g,redshift,7,3.937
+2018-11-29-23:45:53,tpch_3g,redshift,8,3.412
+2018-11-29-23:45:53,tpch_3g,redshift,9,5.113
+2018-11-29-23:45:53,tpch_3g,redshift,10,8.647
+2018-11-29-23:45:53,tpch_3g,redshift,11,4.333
+2018-11-29-23:45:53,tpch_3g,redshift,12,3.108
+2018-11-29-23:45:53,tpch_3g,redshift,13,2.970
+2018-11-29-23:45:53,tpch_3g,redshift,14,0.598
+2018-11-29-23:45:53,tpch_3g,redshift,15,3.325
+2018-11-29-23:45:53,tpch_3g,redshift,16,2.836
+2018-11-29-23:45:53,tpch_3g,redshift,17,1.605
+2018-11-29-23:45:53,tpch_3g,redshift,18,9.761
+2018-11-29-23:45:53,tpch_3g,redshift,19,4.019
+2018-11-29-23:45:53,tpch_3g,redshift,20,psql:/home/xu6/tpch/postgresql/query/20.sql:40: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.147
+2018-11-29-23:45:53,tpch_3g,redshift,21,11.173
+2018-11-29-23:45:53,tpch_3g,redshift,22,0.728
+2018-11-29-23:48:07,tpch_3g,redshift,1,0.021
+2018-11-29-23:48:07,tpch_3g,redshift,2,0.017
+2018-11-29-23:48:07,tpch_3g,redshift,3,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,4,psql:/home/xu6/tpch/postgresql/query/4.sql:24: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.028
+2018-11-29-23:48:07,tpch_3g,redshift,5,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,6,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,7,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,8,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,9,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,10,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,11,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,12,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,13,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,14,0.015
+2018-11-29-23:48:07,tpch_3g,redshift,15,1.214
+2018-11-29-23:48:07,tpch_3g,redshift,16,0.821
+2018-11-29-23:48:07,tpch_3g,redshift,17,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,18,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,19,0.016
+2018-11-29-23:48:07,tpch_3g,redshift,20,psql:/home/xu6/tpch/postgresql/query/20.sql:40: ERROR:  This type of correlated subquery pattern is not supported due to internal error
+0.146
+2018-11-29-23:48:07,tpch_3g,redshift,21,0.017
+2018-11-29-23:48:07,tpch_3g,redshift,22,0.015
