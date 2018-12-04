@@ -131,3 +131,47 @@
 2018-11-30-10:06:52,tpch_3g,aurora,20,1.076
 2018-11-30-10:06:52,tpch_3g,aurora,21,56.210
 2018-11-30-10:06:52,tpch_3g,aurora,22,0.623
+2018-12-03-08:18:07,tpch_1g,aurora,1,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.027
+2018-12-03-08:18:07,tpch_1g,aurora,2,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.005
+2018-12-03-08:18:07,tpch_1g,aurora,3,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,4,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,5,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,6,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,7,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,8,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,9,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,10,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,11,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,12,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,13,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,14,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,15,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,16,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,17,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,18,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,19,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,20,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,21,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
+2018-12-03-08:18:07,tpch_1g,aurora,22,ERROR 2005 (HY000): Unknown MySQL server host 'csswechat-test.cluster-cd0fafm9s3rf.rds.cn-northwest-1.amazonaws.com.cn' (0)
+0.004
