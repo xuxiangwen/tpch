@@ -1,0 +1,9 @@
+select 'customer ' as table_name, count(1) as cnt from customer union all 
+select 'region   ' as table_name, count(1) as cnt from region   union all 
+select 'nation   ' as table_name, count(1) as cnt from nation   union all 
+select 'supplier ' as table_name, count(1) as cnt from supplier union all 
+select 'part     ' as table_name, count(1) as cnt from part     union all 
+select 'partsupp ' as table_name, count(1) as cnt from partsupp union all 
+select 'orders   ' as table_name, count(1) as cnt from orders   union all 
+select 'lineitem ' as table_name, count(1) as cnt from lineitem ; 
+
