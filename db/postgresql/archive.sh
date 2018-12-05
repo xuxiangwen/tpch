@@ -10,7 +10,7 @@ fi
 if [ -f $script_path/tpch.log  ]; then
   mv -f $script_path/tpch.log $script_path/history/tpch.log.$clean_time
 fi
-echo test_time,database,db_type,query_id,query_time > $script_path/tpch.csv
+echo instance,database,test_time,db_name,batch_id,query_id,query_time > $script_path/tpch.csv
 echo > $script_path/tpch.log
 echo 'done'
 

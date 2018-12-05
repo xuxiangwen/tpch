@@ -1,1 +1,834 @@
 
+=========================================================
+2018-12-05-22:54:50: start tpc-h with batch_id=10 on tpch_1g
+-------------------------------------------------------
+2018-12-05-22:54:50: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/1.sql
+ l_returnflag | l_linestatus |   sum_qty   | sum_base_price |  sum_disc_price  |     sum_charge     |       avg_qty       |     avg_price      |        avg_disc        | count_order 
+--------------+--------------+-------------+----------------+------------------+--------------------+---------------------+--------------------+------------------------+-------------
+ A            | F            | 37734107.00 | 56586554400.73 | 53758257134.8700 | 55909065222.827692 | 25.5220058532573370 | 38273.129734621672 | 0.04998529583839761162 |     1478493
+(1 row)
+
+2018-12-05-22:54:53: elaspe_time = 2.745 seconds
+-------------------------------------------------------
+2018-12-05-22:54:53: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/2.sql
+ s_acctbal |          s_name           |          n_name           | p_partkey |          p_mfgr           |                s_address                 |     s_phone     |                                              s_comment                                               
+-----------+---------------------------+---------------------------+-----------+---------------------------+------------------------------------------+-----------------+------------------------------------------------------------------------------------------------------
+   9889.30 | Supplier#000007987        | CANADA                    |    165470 | Manufacturer#2            | NZXfuWO7nKQDj4xyO31N29                   | 13-178-212-4133 | ickly. furiously express courts cajole slyly. fluffily special requests hag
+   9886.73 | Supplier#000008497        | BRAZIL                    |    188496 | Manufacturer#5            | xef7AF1FKfjml5HrGfEHtkhk3Tbeg0ms         | 12-748-918-9360 | . foxes nag slyly express, regular multipliers. requests after the carefully ironic accounts grow re
+   9865.54 | Supplier#000006750        | BRAZIL                    |    191711 | Manufacturer#4            | nYQx9ZK0xmoFMbSf                         | 12-128-392-9206 | ans. even forges cajole carefully ironic dep
+   9823.21 | Supplier#000004851        | CANADA                    |      9850 | Manufacturer#1            | Rj,x6IgLT7kBL99nqp                       | 13-913-167-7389 |  final deposits integrate slyly quickly ironic deposits. deposits hinder quickly 
+   9821.11 | Supplier#000005987        | ARGENTINA                 |    145986 | Manufacturer#1            | TzZR8IiWBt tEspR9hcNACKHOk               | 11-688-883-4586 | kly ironic packages alongside of the packages are quickly bold deposits
+   9821.11 | Supplier#000005987        | ARGENTINA                 |    173469 | Manufacturer#2            | TzZR8IiWBt tEspR9hcNACKHOk               | 11-688-883-4586 | kly ironic packages alongside of the packages are quickly bold deposits
+   9795.57 | Supplier#000008901        | UNITED STATES             |    148900 | Manufacturer#2            | 80p4fwgJ1a                               | 34-363-626-6781 | s sleep blithely about the slyly even deposits. slyly final accounts cajole furiously furiou
+   9769.31 | Supplier#000007184        | ARGENTINA                 |    102163 | Manufacturer#5            | AKfsS0cnFq64dK                           | 11-750-116-8427 | ily blithely regular packages. fluffi
+   9768.10 | Supplier#000004277        | ARGENTINA                 |    151761 | Manufacturer#3            | MPjnMRh5nwI                              | 11-321-241-8114 | final deposits. furiously express instructions boost fluffily around the silent, final packages. 
+   9703.05 | Supplier#000003351        | ARGENTINA                 |    128326 | Manufacturer#2            | vb7b9r9na5slC4 MNIQS8hJcWKZga            | 11-368-852-9514 | refully regular requests. dependencies detect carefully about the pending, final d
+   9697.97 | Supplier#000005989        | CANADA                    |    105988 | Manufacturer#4            | rjFY,5kgLpBu7c                           | 13-151-500-7938 | cial requests. blithely ironic waters detect slyly. ruthless court
+   9697.71 | Supplier#000009700        | ARGENTINA                 |     59699 | Manufacturer#2            |  UTdFgLjpAb3                             | 11-622-840-3751 |  quickly even foxes. deposits around the regular theodolites use furiously blithely r
+   9615.51 | Supplier#000008855        | ARGENTINA                 |     43846 | Manufacturer#1            | 4Otz38w8BmX,F2TXhVE5TGV71QVj46tYWa       | 11-503-966-2355 | nal dependencies. express, special excuses are courts. foxes unw
+   9584.92 | Supplier#000005192        | CANADA                    |    117658 | Manufacturer#3            | JDp4rhXiDw0kf6RH                         | 13-136-480-6518 | iously regular dolphins affix fluffily special instructions. quic
+   9584.92 | Supplier#000005192        | CANADA                    |    130165 | Manufacturer#1            | JDp4rhXiDw0kf6RH                         | 13-136-480-6518 | iously regular dolphins affix fluffily special instructions. quic
+   9584.63 | Supplier#000000653        | PERU                      |    143110 | Manufacturer#5            | IK8OvngBYI1zh9bbK0vLThzVvk7F69hxytOmq    | 27-391-635-2412 | ar foxes cajole about the quietly final pinto beans. ex
+   9542.91 | Supplier#000001985        | UNITED STATES             |    176950 | Manufacturer#1            | iNpX5StxnUW8DlgToWvv9kZ Uk               | 34-968-184-3570 | sly regular dependencies against the bli
+   9530.60 | Supplier#000008038        | UNITED STATES             |    105527 | Manufacturer#1            | YkkdqEh9lvZyRRE4nmJ3vsZM0                | 34-568-253-8725 | sly special deposits boost bli
+   9530.60 | Supplier#000008038        | UNITED STATES             |    118037 | Manufacturer#4            | YkkdqEh9lvZyRRE4nmJ3vsZM0                | 34-568-253-8725 | sly special deposits boost bli
+   9515.39 | Supplier#000008326        | BRAZIL                    |     70804 | Manufacturer#4            | guSNtiNA5pR1P5b4scyzK                    | 12-631-356-6254 | ly ironic requests. furiously pending deposits use even deposits. express, bold
+   9515.39 | Supplier#000008326        | BRAZIL                    |    113303 | Manufacturer#5            | guSNtiNA5pR1P5b4scyzK                    | 12-631-356-6254 | ly ironic requests. furiously pending deposits use even deposits. express, bold
+   9497.65 | Supplier#000000624        | ARGENTINA                 |     65611 | Manufacturer#1            | JlCK4aBP3PCO                             | 11-487-571-9291 | the silent, final pinto be
+   9477.34 | Supplier#000000431        | CANADA                    |     35424 | Manufacturer#4            | WoeV,NINojE6hJjauAdrl5fGcdxX5JUPLnrim    | 13-269-548-1399 |  according to the bravely quick dolphins. deposit
+   9477.34 | Supplier#000000431        | CANADA                    |    117919 | Manufacturer#5            | WoeV,NINojE6hJjauAdrl5fGcdxX5JUPLnrim    | 13-269-548-1399 |  according to the bravely quick dolphins. deposit
+   9453.06 | Supplier#000009811        | CANADA                    |     44802 | Manufacturer#2            | E3iuyq7UnZxU7oPZIe2Gu6                   | 13-468-254-3805 | ular, regular instructions across the quickly expre
+   9410.91 | Supplier#000006029        | ARGENTINA                 |    101008 | Manufacturer#5            | v2zM32stD8DvFa                           | 11-488-306-3669 | lithely bold accounts nag enticingly. packages sleep furiously slyly final accoun
+   9353.40 | Supplier#000003570        | ARGENTINA                 |     28565 | Manufacturer#3            | dXLhbtaebBIgqPc8Iksno                    | 11-463-717-2694 | ing to the carefully final wa
+   9345.76 | Supplier#000001157        | PERU                      |     43644 | Manufacturer#1            | O69Bgymkxg1mACtNmQ,5                     | 27-342-536-4024 | ular patterns are blithely among the carefully regular deposits. blithely ev
+   9330.71 | Supplier#000008542        | UNITED STATES             |     68541 | Manufacturer#2            | YPhfijxCiFKkm8,S                         | 34-764-457-8674 | as sleep blithely pending accoun
+   9330.71 | Supplier#000008542        | UNITED STATES             |    146027 | Manufacturer#4            | YPhfijxCiFKkm8,S                         | 34-764-457-8674 | as sleep blithely pending accoun
+   9328.74 | Supplier#000006433        | BRAZIL                    |    143918 | Manufacturer#4            | XFR4njr2MWVhePaXAXhoNqb,gJsyf,cK         | 12-971-857-5905 | equests boost slyly past the foxes. regular foxes are 
+   9326.27 | Supplier#000004721        | PERU                      |    154720 | Manufacturer#5            | 9ClOEYZoLDciULWl1ljA                     | 27-951-525-7255 | ctions. furiously even theodolites are furiously final pack
+   9287.24 | Supplier#000006764        | CANADA                    |    196763 | Manufacturer#5            | caeE02gh59 c7Q6m9LPAJV f0W,OCVWjn8I      | 13-458-611-1601 | nstructions. regular, regular frets do
+   9284.30 | Supplier#000007545        | PERU                      |     72530 | Manufacturer#3            | lRLYS1M8CXnOYJ9HITCcqk uZKPFjdmS         | 27-596-939-3829 | egular theodolites along the fluffily ironic packages use blithely duri
+   9261.33 | Supplier#000006030        | ARGENTINA                 |     83521 | Manufacturer#2            | FZwls8Wy7mYrj netgHZS4E                  | 11-166-588-6851 | ss, even requests sleep bl
+   9261.33 | Supplier#000006030        | ARGENTINA                 |    111007 | Manufacturer#2            | FZwls8Wy7mYrj netgHZS4E                  | 11-166-588-6851 | ss, even requests sleep bl
+   9246.89 | Supplier#000004900        | PERU                      |     12398 | Manufacturer#1            | CSG,mmblpJ,mj8Z                          | 27-141-214-3558 | quests wake quickly. carefully final requests serve furiously furiously final deposits. unusual pint
+   9167.84 | Supplier#000004022        | UNITED STATES             |    148993 | Manufacturer#5            | hBM8bCaPoIiubGfQAWhkCC9TLsgZAE6Wd0O0ap   | 34-922-888-1759 | olites nag bold theodolites. requests boost slyly even package
+   9164.59 | Supplier#000006168        | PERU                      |    118634 | Manufacturer#1            | AZX0AUGidt4W0BdJHiXUCnti8u               | 27-773-867-9817 | s are carefully silent foxes! pending, final instructions integrate s
+   9142.88 | Supplier#000004961        | CANADA                    |     27454 | Manufacturer#2            | HTHQsovnuqEaKFswci8rS                    | 13-441-823-4698 | ly unusual platelets cajole carefully silent instructions. careful, final request
+   9131.89 | Supplier#000004956        | UNITED STATES             |    124955 | Manufacturer#1            | ibDuLQ0D8W1hK3m 7sMKFt5fw8XGzp1aU        | 34-954-986-5576 | arefully express dolphins kindle against the carefully final accounts; sentiments 
+   9107.22 | Supplier#000000013        | CANADA                    |    140012 | Manufacturer#5            | HK71HQyWoqRWOX8GI FpgAifW,2PoH           | 13-727-620-7813 | requests engage regularly instructions. furiously special requests ar
+   9098.64 | Supplier#000000989        | ARGENTINA                 |     25984 | Manufacturer#5            | e5uX8AJF,,zRIIDgJc YMB59ITz4v            | 11-895-219-9405 | t the silent, final dependencies use busily above the reg
+   9098.64 | Supplier#000000989        | ARGENTINA                 |    148474 | Manufacturer#5            | e5uX8AJF,,zRIIDgJc YMB59ITz4v            | 11-895-219-9405 | t the silent, final dependencies use busily above the reg
+   9095.31 | Supplier#000004593        | ARGENTINA                 |    129568 | Manufacturer#5            | yvhjhCRGmsENgm9SXwjQAUdNn3               | 11-519-428-6393 | ptotes? sly requests use about th
+   9093.47 | Supplier#000006904        | PERU                      |     86903 | Manufacturer#4            | EKpE28VGC6ShEWvrYdlDVcX4sm6utl9 ibJDf    | 27-999-609-8430 | ly express instructions wake special platelets. fluffily regular accounts cajole according to 
+   9093.47 | Supplier#000006904        | PERU                      |    101883 | Manufacturer#5            | EKpE28VGC6ShEWvrYdlDVcX4sm6utl9 ibJDf    | 27-999-609-8430 | ly express instructions wake special platelets. fluffily regular accounts cajole according to 
+   9086.14 | Supplier#000009301        | PERU                      |     99300 | Manufacturer#4            | cZbZX7WSUJU41dwwjFlVUHBoeY6lrv3S         | 27-159-994-1867 |  ideas are against the theodolites
+   9077.74 | Supplier#000000725        | ARGENTINA                 |    185688 | Manufacturer#5            | fFk BGhsIcG6                             | 11-382-323-5460 | pinto beans are carefully. blithely regular depos
+   9067.53 | Supplier#000009508        | PERU                      |     24503 | Manufacturer#3            | NVr1A8EDasnF6SHLmtRVHc1nOUsFW            | 27-937-803-8397 |  deposits breach slyly up the slyly final
+   9067.53 | Supplier#000009508        | PERU                      |    184471 | Manufacturer#4            | NVr1A8EDasnF6SHLmtRVHc1nOUsFW            | 27-937-803-8397 |  deposits breach slyly up the slyly final
+   9064.19 | Supplier#000008467        | CANADA                    |     28466 | Manufacturer#4            | mOzxpu7,0X7f2,BY3d OnG6yDTPz7k74         | 13-460-470-1371 | ages haggle furiously. special warho
+   9060.27 | Supplier#000001865        | PERU                      |      6864 | Manufacturer#4            | oul9HB4pB7tz32OMRgOwSYsfRdvR,jm          | 27-399-417-8796 | . regular dependencies cajole 
+   9020.48 | Supplier#000002494        | CANADA                    |     64975 | Manufacturer#3            | 8 j3qJvL6qjroE avAdKFooKo4IMH2oPHLXH0H9p | 13-124-905-2996 |  requests. furiously ironic packages boost fu
+   8996.14 | Supplier#000003894        | CANADA                    |    198855 | Manufacturer#4            | vvGC rameLOk                             | 13-295-878-3930 | side of the blithely regular deposits. slyly express requests among the slyly fi
+   8988.09 | Supplier#000003535        | ARGENTINA                 |     28530 | Manufacturer#5            | u8I9LNtaG4tTe9zvcazd6Rgac0PEdrywl        | 11-193-489-5402 | al pinto beans nag furiously pinto beans. quickly brave excuses 
+   8968.19 | Supplier#000007941        | UNITED STATES             |    190383 | Manufacturer#4            | Tf7nhtroLcf                              | 34-564-866-9116 | quickly along the slyly fin
+   8967.41 | Supplier#000009703        | PERU                      |    134676 | Manufacturer#4            | 461W023tsamk5gRq9x U                     | 27-841-617-4653 | nal deposits sleep blithely at the final theodolites. quickly final re
+   8898.31 | Supplier#000008015        | PERU                      |     18014 | Manufacturer#2            | 2QO5akJCIWqYNq9 3oXrZoehcFnYp,5id3Vzf    | 27-211-904-6964 | larly about the quickly pending requests. furi
+   8883.91 | Supplier#000007375        | PERU                      |    164858 | Manufacturer#4            | xYRtkObjcIwnZ1UV2bxQzPA                  | 27-845-316-7062 | ses. carefully regular excuses haggle carefully after the blithely regular instructions
+   8878.51 | Supplier#000009365        | BRAZIL                    |     44356 | Manufacturer#2            | Ga98U7khv9saRWNZwHc                      | 12-417-761-5258 | riously even foxes haggle after the ideas. blithely pending excuses are blithely. special as
+   8878.31 | Supplier#000003275        | CANADA                    |     93274 | Manufacturer#5            | 9xO4nyJ2QJcX6vGf                         | 13-124-425-5571 | latelets are carefully quickly regular foxes. final instruc
+   8871.48 | Supplier#000005364        | ARGENTINA                 |     20359 | Manufacturer#2            | JQv2kRDiSrNNy,kXc2aWl                    | 11-883-386-6571 |  forges; carefully final accounts mold? iro
+   8865.60 | Supplier#000004646        | ARGENTINA                 |    122133 | Manufacturer#4            | 3x1lY3ib1s18KUTLHv62hNuJS6Vvmfzm         | 11-545-572-2776 |  requests. slyly even foxes sleep about the furiously pending packages. close, pe
+   8863.78 | Supplier#000006978        | BRAZIL                    |     59462 | Manufacturer#4            | FS17zlWYWaXqA3aUj3oOR3sdMhTN3            | 12-218-384-6106 |  the even asymptotes cajole quickly abou
+   8853.35 | Supplier#000003028        | CANADA                    |     75506 | Manufacturer#3            | jouzgX0WZjhNMWLaH4fy                     | 13-671-694-4022 | . even deposits x-ray quickly.
+   8831.62 | Supplier#000001360        | ARGENTINA                 |    196321 | Manufacturer#4            | elN50rcw Ktxr2rzSF9rsUto8FNijhOjO        | 11-456-537-2079 | es. carefully pending ideas behind the doggedly unusual theodolites maintain busily ac
+   8808.10 | Supplier#000007760        | CANADA                    |     87759 | Manufacturer#4            | JsPE18PvcdFTK                            | 13-639-678-5341 | nd the final, final accounts sleep fluffily 
+   8808.10 | Supplier#000007760        | CANADA                    |    120223 | Manufacturer#1            | JsPE18PvcdFTK                            | 13-639-678-5341 | nd the final, final accounts sleep fluffily 
+   8796.14 | Supplier#000004371        | CANADA                    |     51865 | Manufacturer#4            | krCpx7vN0eJ06aMie Lh7VwTDz               | 13-840-203-5593 | dle furiously according to the packages. stealthy, pending courts ought to mold blithely alongs
+   8787.11 | Supplier#000007074        | BRAZIL                    |     44569 | Manufacturer#4            | kTHqfxDR,H8b9 Pra8A,jPB2Kv3              | 12-295-238-1986 |  pending hockey players cajole blithely. slyly even requests across the carefully ironi
+   8766.33 | Supplier#000006127        | ARGENTINA                 |      6126 | Manufacturer#5            | nnt,r9fwTQK                              | 11-630-893-3735 | ously slyly special hockey players. furiously regular hockey 
+   8712.72 | Supplier#000001730        | CANADA                    |    129217 | Manufacturer#4            | Rc8e,1Pybn r6zo0VJIEiD0UD vhk            | 13-788-703-6101 |  pending ideas are carefully furiously unusual asymptotes. express packag
+   8689.46 | Supplier#000009252        | CANADA                    |    181697 | Manufacturer#5            | F7cZaPUHwh1 ZKyj3xmAVWC1XdP ue1p5m,i     | 13-980-495-4398 | ependencies nag blithely fluffily final pinto beans. 
+   8684.91 | Supplier#000001110        | ARGENTINA                 |     23603 | Manufacturer#2            | RAo58clTXY7Z3IZCtGIGa3HLD84J,9NuUpXOh06Q | 11-569-316-3148 | ng the even requests wake blithely a
+   8681.24 | Supplier#000000765        | UNITED STATES             |    125740 | Manufacturer#1            | RLsvd,9rVYPSoMUCDBVoB9                   | 34-103-698-2282 | accounts grow. ideas cajole slyly. ironic requests haggle slyly e
+   8651.48 | Supplier#000002807        | BRAZIL                    |    150291 | Manufacturer#5            | 2nGNpyXEobNolKSeuspKvc343Aw,ys           | 12-830-799-6122 | usly alongside of the daringly 
+   8637.46 | Supplier#000008635        | UNITED STATES             |    103614 | Manufacturer#1            | zek4Jz SrK3                              | 34-857-521-3294 | nts. carefully final deposits doze along the deposits. bold, even accounts print
+   8485.78 | Supplier#000003511        | PERU                      |     48502 | Manufacturer#4            | UmDDReXgZCgfQigAdPq1aKn5E6Xv             | 27-391-473-9631 | l packages integrate blithely ironic theodolites. silent, ironic accounts are regular, regul
+   8471.77 | Supplier#000001339        | UNITED STATES             |     43826 | Manufacturer#2            | 5c4jzbVZLzvxrok                          | 34-581-968-4641 |  packages cajole quickly above the carefully special requ
+   8402.33 | Supplier#000004701        | CANADA                    |     82192 | Manufacturer#5            | 6jX4u47URzIMHf                           | 13-678-533-3515 | uests. fluffily regular deposits promise 
+   8401.60 | Supplier#000006420        | UNITED STATES             |     83911 | Manufacturer#2            | WsuMIhxVOrPENcumh1aMY9MjZIJHhUEtsUmn     | 34-210-737-7162 | ly express deposits. accounts haggle 
+   8384.14 | Supplier#000006217        | CANADA                    |    138677 | Manufacturer#3            | RVN23SYT9jenUeaWGXUd                     | 13-309-288-5638 | efully even ideas. express packages boost furiously. carefully fin
+   8366.89 | Supplier#000000483        | BRAZIL                    |     15480 | Manufacturer#2            | ncWfnroE1n639qMrW8                       | 12-443-228-5035 | refully regular ideas. furiously express theodolites across the sl
+   8344.14 | Supplier#000005203        | ARGENTINA                 |     80186 | Manufacturer#3            | 8uIpv041PoCb034MOB LeEzbtOgqY51aK        | 11-214-499-8004 |  cajole fluffily. furiousl
+   8311.79 | Supplier#000005752        | UNITED STATES             |    120727 | Manufacturer#1            | qKui69rK6v0l,fz1T                        | 34-134-879-4176 | sheaves. furiously ironic requests are alongside of the sometimes idle foxes. boldly iro
+   8219.58 | Supplier#000009554        | PERU                      |     29553 | Manufacturer#3            | e8De3zk2cRdvxQihN7IArownHTJFTgujVthQbd   | 27-190-154-5202 | st carefully permanently ironic foxes.
+   8210.13 | Supplier#000000860        | PERU                      |      5859 | Manufacturer#2            | C9FacsR,23JNHd8ioSI5qC7FfnR              | 27-547-426-7236 | ilent, regular ideas. bold, unus
+   8197.46 | Supplier#000008872        | CANADA                    |    118871 | Manufacturer#1            | 8D 45GgxJO2OwwYP9S4AaXJKvDwPfLM          | 13-483-360-2131 |  ironic pinto beans. deposits are even, ironic dolp
+   8153.24 | Supplier#000005411        | ARGENTINA                 |     15410 | Manufacturer#1            | f6zhj5JRnAr                              | 11-541-551-7273 | es. furiously pending dependenc
+   8118.27 | Supplier#000003423        | CANADA                    |     43422 | Manufacturer#2            | ,,hFmixRsUfI                             | 13-477-872-1285 | e slyly regular dolphins. quickly regular foxes nag. requests boost fluff
+   8067.21 | Supplier#000001175        | BRAZIL                    |    106154 | Manufacturer#4            | Iv98FgNxQ1e8hWfVM3flCuAEAJt8MbAHLAj9     | 12-637-911-1584 | : furiously final forges within the quickly regular instructions use against the iro
+   8001.44 | Supplier#000002941        | CANADA                    |    105410 | Manufacturer#4            | Naddba 8YTEKekZyP0                       | 13-722-750-8709 | l asymptotes. express plate
+   7985.78 | Supplier#000000990        | BRAZIL                    |    178472 | Manufacturer#4            | DeOjGX,4Ns1                              | 12-647-684-5389 | y ironic packages sleep fluffily despite the grouches-- bold, special accounts nag along the carefu
+   7970.29 | Supplier#000009000        | BRAZIL                    |      8999 | Manufacturer#2            | b0YEeuzRiGPLrPzAFHBuKiur4sV7Laxu,Iz6NAT  | 12-908-707-8215 | blithely close theodolites boost furiously about the enticing ideas.
+   7963.89 | Supplier#000004236        | CANADA                    |    156690 | Manufacturer#5            | dl,HPtJmGipxYsSqn9wmqkuWjst,mCeJ8O6T     | 13-838-515-8794 | g blithely final, special theodolites. blithely final pinto be
+   7924.48 | Supplier#000002192        | UNITED STATES             |     72191 | Manufacturer#4            | KWu5GK8oZHC7tP                           | 34-619-665-9112 | ly bold deposits. slyly pending theod
+   7916.11 | Supplier#000007437        | BRAZIL                    |     39927 | Manufacturer#5            | OAXmJUfE1c7naS                           | 12-742-862-9372 | aggle across the fluffily blithe theodolites. dependencies ca
+   7911.07 | Supplier#000009567        | CANADA                    |    114544 | Manufacturer#2            | r4Wfx4c3xsEAjcGj71HHZByornl D9vrztXlv4   | 13-816-610-4613 |  quickly pending accounts about the fluffy theodolites are permanently at the slow realms. regular d
+   7905.74 | Supplier#000006156        | PERU                      |     68637 | Manufacturer#4            | 3E BnFXjwiYoqmzq0eHiB                    | 27-312-123-1541 | o beans sleep doggedly ironic packages. slyly unusual packages dazzle fu
+(100 rows)
+
+2018-12-05-22:54:54: elaspe_time = 0.486 seconds
+-------------------------------------------------------
+2018-12-05-22:54:54: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/3.sql
+ l_orderkey |   revenue   | o_orderdate | o_shippriority 
+------------+-------------+-------------+----------------
+    4791171 | 452497.4729 | 1995-02-23  |              0
+    4163074 | 437267.7799 | 1995-02-13  |              0
+    4676933 | 412072.0035 | 1995-02-07  |              0
+    3778628 | 399682.3516 | 1995-02-25  |              0
+    2773540 | 398691.5039 | 1995-02-27  |              0
+    2692902 | 394554.8742 | 1995-03-06  |              0
+    4178471 | 390099.4832 | 1995-02-28  |              0
+     604128 | 386703.2407 | 1995-02-10  |              0
+    1310209 | 381336.0532 | 1995-02-23  |              0
+    1757283 | 380264.2700 | 1995-02-16  |              0
+(10 rows)
+
+2018-12-05-22:54:54: elaspe_time = 0.544 seconds
+-------------------------------------------------------
+2018-12-05-22:54:54: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/4.sql
+ o_orderpriority | order_count 
+-----------------+-------------
+ 1-URGENT        |       10478
+(1 row)
+
+2018-12-05-22:54:54: elaspe_time = 0.263 seconds
+-------------------------------------------------------
+2018-12-05-22:54:54: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/5.sql
+          n_name           |    revenue    
+---------------------------+---------------
+ ROMANIA                   | 54833355.4104
+(1 row)
+
+2018-12-05-22:54:55: elaspe_time = 0.597 seconds
+-------------------------------------------------------
+2018-12-05-22:54:55: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/6.sql
+    revenue     
+----------------
+ 178649189.6249
+(1 row)
+
+2018-12-05-22:54:56: elaspe_time = 0.807 seconds
+-------------------------------------------------------
+2018-12-05-22:54:56: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/7.sql
+        supp_nation        |        cust_nation        | l_year |    revenue    
+---------------------------+---------------------------+--------+---------------
+ RUSSIA                    | VIETNAM                   |   1995 | 55073011.4664
+(1 row)
+
+2018-12-05-22:54:57: elaspe_time = 0.696 seconds
+-------------------------------------------------------
+2018-12-05-22:54:57: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/8.sql
+ o_year |       mkt_share        
+--------+------------------------
+   1995 | 0.03493967028643022581
+(1 row)
+
+2018-12-05-22:54:57: elaspe_time = 0.835 seconds
+-------------------------------------------------------
+2018-12-05-22:54:57: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/9.sql
+          nation           | o_year |  sum_profit   
+---------------------------+--------+---------------
+ ALGERIA                   |   1998 | 28627504.9872
+(1 row)
+
+2018-12-05-22:54:59: elaspe_time = 1.981 seconds
+-------------------------------------------------------
+2018-12-05-22:54:59: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/10.sql
+ c_custkey |       c_name       |   revenue   | c_acctbal |          n_name           |                c_address                |     c_phone     |                                                      c_comment                                                       
+-----------+--------------------+-------------+-----------+---------------------------+-----------------------------------------+-----------------+----------------------------------------------------------------------------------------------------------------------
+     90643 | Customer#000090643 | 783400.8234 |   8865.95 | INDIA                     | ,ad78KOYjsrNrc,Pemlq7E81stzy4JBH9eFb    | 18-204-287-4176 | the furiously express packages; bold foxes are quickly along the furiously final theodolites. f
+     88684 | Customer#000088684 | 735059.3895 |    631.24 | KENYA                     | EKXaOGt2m0C4XwrW                        | 24-669-503-9939 | thely regular deposits across the quiet ideas cajole depe
+    125152 | Customer#000125152 | 706048.7200 |   -250.02 | ARGENTINA                 | LqgdfafviyRa29AwLF                      | 11-735-849-1130 | onic excuses. thin deposits along the foxes affix after the final accounts. blithely final foxe
+      7849 | Customer#000007849 | 686762.6298 |   6539.10 | INDONESIA                 | MhwIrrgoSa9NX2ln                        | 19-700-739-5553 | ccounts. pending ideas engage quickly furiously silent asy
+     16813 | Customer#000016813 | 676931.5937 |    914.31 | GERMANY                   | uJ2IReQTBJz8tmBJFJXikRg3adczY           | 17-300-263-7132 |  special accounts; unusual, even packages w
+     12085 | Customer#000012085 | 662208.8049 |   2755.79 | CHINA                     | TfNy5d3AUMIFEL7Ko9eUKgZ2N1              | 28-996-962-6098 | ly special foxes haggle. regular mul
+    129214 | Customer#000129214 | 653792.0301 |   3861.37 | MOROCCO                   | m9,yMtfHPqqXce3aj9E6rM39v3BBY3Fyfy      | 25-684-802-7288 | efully ironic accounts haggle blithely blithely regular pinto beans. pinto beans nag! special, enticing req
+    117586 | Customer#000117586 | 638823.7345 |   4967.23 | BRAZIL                    | B4ZnfqOBIvkG2E1Yd                       | 12-118-132-4034 | y. slyly careful asymptotes haggle carefully slyly qui
+    138487 | Customer#000138487 | 634897.8562 |   7642.95 | GERMANY                   | 9PGMl d6EFQUguep ZD                     | 17-762-567-5386 | lly regular theodolites. even, bold ideas promise blithe
+     54109 | Customer#000054109 | 632691.3343 |   9297.59 | VIETNAM                   | XspBR,UWAtw                             | 31-932-764-9959 | t carefully quickly even foxes. slyly express decoys cajole blithely along the even, ironic excuses. blithely specia
+    124705 | Customer#000124705 | 597965.2416 |   2249.29 | ETHIOPIA                  | Vu6baWysjE62kIM2                        | 15-169-599-3146 | odolites. packages boost carefully ironic requests. accounts
+     35137 | Customer#000035137 | 588862.6838 |   1361.40 | UNITED STATES             | OzLE9iO4fQByPQ9LR TkwrymlIlwGhp         | 34-781-872-3490 | xcuses nag boldly. carefully even instructions inste
+    123940 | Customer#000123940 | 587090.1599 |    113.67 | GERMANY                   | 6mHpE0grcq9v38QTq                       | 17-175-484-8648 |  quickly pending deposits wake blithely. blithely unusual dependencies hagg
+    108973 | Customer#000108973 | 585748.8478 |   8883.83 | JAPAN                     | j88v 9YUfF m XR4NuJr2JGlbTv1cG          | 22-520-736-9928 | dolphins must have to nag special requests. slyly regular foxes are furiously across the blithely 
+    106528 | Customer#000106528 | 583437.6048 |   3598.58 | BRAZIL                    | UdQDDw0gKV                              | 12-944-953-6424 | ounts. requests above the packages haggle about the ideas! sometimes bold ideas cajole fluffily at the bus
+    110968 | Customer#000110968 | 581702.5205 |   3572.93 | UNITED STATES             | vSCk2nKpMQKDxu0lcejgEU3PC49jHoODKm      | 34-290-576-2188 | of the unusual ideas use quickly quietly unusual
+     11182 | Customer#000011182 | 580488.8675 |   8376.46 | INDIA                     | loOPslCRwJWnhBQDMwslM 4zNh i6owqLQrl,YX | 18-114-961-2821 | he carefully silent dinos sleep fluffily according to the pending requests. quickly pending request
+     76717 | Customer#000076717 | 578909.8480 |   -417.61 | ETHIOPIA                  | SezVzVjiV uEBu6ifiSeS                   | 15-228-689-5121 | posits. special accounts after the even, pending excuses sleep carefully along the slyly express deposits. bl
+     16928 | Customer#000016928 | 577331.0656 |   5788.37 | CHINA                     | AAW,,gk7UIjdkLMnrKa7r0THl               | 28-863-502-6039 | ly. packages nag slyly. slyly even packages use. regular packages sleep even ideas. even as
+     28480 | Customer#000028480 | 575901.0685 |   -572.23 | CHINA                     | HSj7AFc4OyHImjgZrRMaj6C                 | 28-719-299-2580 | ely unusual deposits are. sly asy
+(20 rows)
+
+2018-12-05-22:55:00: elaspe_time = 0.645 seconds
+-------------------------------------------------------
+2018-12-05-22:55:00: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/11.sql
+ ps_partkey |    value    
+------------+-------------
+      17457 | 18586564.08
+(1 row)
+
+2018-12-05-22:55:00: elaspe_time = 0.173 seconds
+-------------------------------------------------------
+2018-12-05-22:55:00: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/12.sql
+ l_shipmode | high_line_count | low_line_count 
+------------+-----------------+----------------
+ AIR        |            6169 |           9444
+(1 row)
+
+2018-12-05-22:55:01: elaspe_time = 0.694 seconds
+-------------------------------------------------------
+2018-12-05-22:55:01: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/13.sql
+ c_count | custdist 
+---------+----------
+       0 |    50005
+(1 row)
+
+2018-12-05-22:55:03: elaspe_time = 1.929 seconds
+-------------------------------------------------------
+2018-12-05-22:55:03: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/14.sql
+    promo_revenue    
+---------------------
+ 16.6319030732096076
+(1 row)
+
+2018-12-05-22:55:03: elaspe_time = 0.430 seconds
+-------------------------------------------------------
+2018-12-05-22:55:03: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/15.sql
+CREATE VIEW
+ s_suppkey |          s_name           |              s_address              |     s_phone     | total_revenue 
+-----------+---------------------------+-------------------------------------+-----------------+---------------
+      3488 | Supplier#000003488        | zwe,Xa15W,EALyO8lF5I51hKEoqMtWlb5r7 | 32-845-486-3686 |  1909858.1794
+(1 row)
+
+DROP VIEW
+2018-12-05-22:55:05: elaspe_time = 1.625 seconds
+-------------------------------------------------------
+2018-12-05-22:55:05: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/16.sql
+  p_brand   |       p_type        | p_size | supplier_cnt 
+------------+---------------------+--------+--------------
+ Brand#55   | LARGE BURNISHED TIN |     21 |           36
+(1 row)
+
+2018-12-05-22:55:06: elaspe_time = 0.860 seconds
+-------------------------------------------------------
+2018-12-05-22:55:06: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/17.sql
+     avg_yearly      
+---------------------
+ 275683.952857142857
+(1 row)
+
+2018-12-05-22:55:08: elaspe_time = 2.398 seconds
+-------------------------------------------------------
+2018-12-05-22:55:08: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/18.sql
+       c_name       | c_custkey | o_orderkey | o_orderdate | o_totalprice |  sum   
+--------------------+-----------+------------+-------------+--------------+--------
+ Customer#000128120 |    128120 |    4722021 | 1994-04-07  |    544089.09 | 323.00
+ Customer#000144617 |    144617 |    3043270 | 1997-02-12  |    530604.44 | 317.00
+ Customer#000066790 |     66790 |    2199712 | 1996-09-30  |    515531.82 | 327.00
+ Customer#000015619 |     15619 |    3767271 | 1996-08-07  |    480083.96 | 318.00
+ Customer#000148885 |    148885 |    2942469 | 1992-05-31  |    469630.44 | 313.00
+ Customer#000147197 |    147197 |    1263015 | 1997-02-02  |    467149.67 | 320.00
+ Customer#000117919 |    117919 |    2869152 | 1996-06-20  |    456815.92 | 317.00
+ Customer#000126865 |    126865 |    4702759 | 1994-11-07  |    447606.65 | 320.00
+ Customer#000036619 |     36619 |    4806726 | 1995-01-17  |    446704.09 | 328.00
+ Customer#000119989 |    119989 |    1544643 | 1997-09-20  |    434568.25 | 320.00
+(10 rows)
+
+2018-12-05-22:55:12: elaspe_time = 3.665 seconds
+-------------------------------------------------------
+2018-12-05-22:55:12: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/19.sql
+   revenue    
+--------------
+ 4309032.6613
+(1 row)
+
+2018-12-05-22:55:12: elaspe_time = 0.071 seconds
+-------------------------------------------------------
+2018-12-05-22:55:12: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/20.sql
+          s_name           |           s_address            
+---------------------------+--------------------------------
+ Supplier#000000045        | LcKnsa8XGtIO0WYSB7hkOrH rnzRg1
+(1 row)
+
+2018-12-05-22:55:15: elaspe_time = 2.639 seconds
+-------------------------------------------------------
+2018-12-05-22:55:15: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/21.sql
+          s_name           | numwait 
+---------------------------+---------
+ Supplier#000000699        |      19
+ Supplier#000001543        |      19
+ Supplier#000007696        |      19
+ Supplier#000009689        |      19
+ Supplier#000002701        |      17
+ Supplier#000005892        |      17
+ Supplier#000005912        |      17
+ Supplier#000009367        |      17
+ Supplier#000000966        |      16
+ Supplier#000000967        |      16
+ Supplier#000003408        |      16
+ Supplier#000004069        |      16
+ Supplier#000004809        |      16
+ Supplier#000005081        |      16
+ Supplier#000006966        |      16
+ Supplier#000007317        |      16
+ Supplier#000007624        |      16
+ Supplier#000008182        |      16
+ Supplier#000008963        |      16
+ Supplier#000009774        |      16
+ Supplier#000009946        |      16
+ Supplier#000001513        |      15
+ Supplier#000001846        |      15
+ Supplier#000002284        |      15
+ Supplier#000003206        |      15
+ Supplier#000004012        |      15
+ Supplier#000005111        |      15
+ Supplier#000005417        |      15
+ Supplier#000005958        |      15
+ Supplier#000006063        |      15
+ Supplier#000006663        |      15
+ Supplier#000007331        |      15
+ Supplier#000008425        |      15
+ Supplier#000009500        |      15
+ Supplier#000000133        |      14
+ Supplier#000000160        |      14
+ Supplier#000001374        |      14
+ Supplier#000001485        |      14
+ Supplier#000001535        |      14
+ Supplier#000001796        |      14
+ Supplier#000002016        |      14
+ Supplier#000002255        |      14
+ Supplier#000002360        |      14
+ Supplier#000002884        |      14
+ Supplier#000003945        |      14
+ Supplier#000004264        |      14
+ Supplier#000005437        |      14
+ Supplier#000006134        |      14
+ Supplier#000006743        |      14
+ Supplier#000006837        |      14
+ Supplier#000006988        |      14
+ Supplier#000007831        |      14
+ Supplier#000008129        |      14
+ Supplier#000008439        |      14
+ Supplier#000008653        |      14
+ Supplier#000009269        |      14
+ Supplier#000009595        |      14
+ Supplier#000009674        |      14
+ Supplier#000000208        |      13
+ Supplier#000000994        |      13
+ Supplier#000001155        |      13
+ Supplier#000002276        |      13
+ Supplier#000002619        |      13
+ Supplier#000002984        |      13
+ Supplier#000003762        |      13
+ Supplier#000004378        |      13
+ Supplier#000004423        |      13
+ Supplier#000004439        |      13
+ Supplier#000004559        |      13
+ Supplier#000005512        |      13
+ Supplier#000005902        |      13
+ Supplier#000006060        |      13
+ Supplier#000006818        |      13
+ Supplier#000007076        |      13
+ Supplier#000007256        |      13
+ Supplier#000007485        |      13
+ Supplier#000008558        |      13
+ Supplier#000009280        |      13
+ Supplier#000009533        |      13
+ Supplier#000000022        |      12
+ Supplier#000000111        |      12
+ Supplier#000000227        |      12
+ Supplier#000000502        |      12
+ Supplier#000000655        |      12
+ Supplier#000000856        |      12
+ Supplier#000001041        |      12
+ Supplier#000001116        |      12
+ Supplier#000002067        |      12
+ Supplier#000002120        |      12
+ Supplier#000002376        |      12
+ Supplier#000002424        |      12
+ Supplier#000003074        |      12
+ Supplier#000003186        |      12
+ Supplier#000003334        |      12
+ Supplier#000003344        |      12
+ Supplier#000003409        |      12
+ Supplier#000003760        |      12
+ Supplier#000004084        |      12
+ Supplier#000004444        |      12
+ Supplier#000004688        |      12
+(100 rows)
+
+2018-12-05-22:55:16: elaspe_time = 0.990 seconds
+-------------------------------------------------------
+2018-12-05-22:55:16: run query /home/grid/eipi10/tpch/queries/db/postgresql/10/22.sql
+ cntrycode | numcust | totacctbal 
+-----------+---------+------------
+ 14        |     955 | 7212285.84
+(1 row)
+
+2018-12-05-22:55:16: elaspe_time = 0.220 seconds
+-------------------------------------------------------
+2018-12-05-22:55:16: finish tpc-h with batch_id=10 on tpch_1g
+=========================================================
+2018-12-05-22:56:48: start tpc-h with batch_id=4 on tpch_1g
+-------------------------------------------------------
+2018-12-05-22:56:48: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/1.sql
+ l_returnflag | l_linestatus |   sum_qty   | sum_base_price |  sum_disc_price  |     sum_charge     |       avg_qty       |     avg_price      |        avg_disc        | count_order 
+--------------+--------------+-------------+----------------+------------------+--------------------+---------------------+--------------------+------------------------+-------------
+ A            | F            | 37734107.00 | 56586554400.73 | 53758257134.8700 | 55909065222.827692 | 25.5220058532573370 | 38273.129734621672 | 0.04998529583839761162 |     1478493
+(1 row)
+
+2018-12-05-22:56:51: elaspe_time = 2.844 seconds
+-------------------------------------------------------
+2018-12-05-22:56:51: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/2.sql
+ s_acctbal |          s_name           |          n_name           | p_partkey |          p_mfgr           |                s_address                 |     s_phone     |                                             s_comment                                              
+-----------+---------------------------+---------------------------+-----------+---------------------------+------------------------------------------+-----------------+----------------------------------------------------------------------------------------------------
+   9872.10 | Supplier#000004823        | ALGERIA                   |    139796 | Manufacturer#5            | cOflLbPaDr6F9LhuG9TWQaRQmSfk mx          | 10-102-116-6785 | yly deposits. careful, regular requests mold slyly. pending deposits cajole blithe
+   9844.00 | Supplier#000000236        | MOROCCO                   |    155205 | Manufacturer#5            | dZExtd1dlMyrPdSqDC3                      | 25-250-525-2436 | lar platelets. blithely ironic packages cajole blithely special ins
+   9836.53 | Supplier#000005077        | ALGERIA                   |    140048 | Manufacturer#2            | AoD06AAcIfuPu4B6YzUyFOYgVyb6             | 10-852-519-9875 | ven accounts. quickly express deposits was blithe
+   9823.56 | Supplier#000009597        | ALGERIA                   |    137083 | Manufacturer#5            | NzBmqXeWCAaQcPnn,nldM5XeD7md6G5qBqGQ     | 10-525-491-6656 | refully ironic dependencies. blithely ironic pinto beans can nag slyly above the permanent dolphi
+   9810.37 | Supplier#000001211        | MOROCCO                   |     16208 | Manufacturer#4            | g lldwVuium jP79qGZT6ztUjTuCZmZKrNlcHglK | 25-752-441-6583 | ong the idly even packages. furiously special acco
+   9810.37 | Supplier#000001211        | MOROCCO                   |    183656 | Manufacturer#5            | g lldwVuium jP79qGZT6ztUjTuCZmZKrNlcHglK | 25-752-441-6583 | ong the idly even packages. furiously special acco
+   9801.63 | Supplier#000008289        | ETHIOPIA                  |     25786 | Manufacturer#5            | fFsGY51lOsR,ckGbgfx6N2uH2IqF             | 15-203-606-1989 | fily bold foxes. final dependencies about the special b
+   9780.74 | Supplier#000000156        | ETHIOPIA                  |    195117 | Manufacturer#3            | ,KXbCcjqZNjmyHzeqaL4                     | 15-106-692-4998 | sits cajole carefully instead of the final, ironic requests. furiously ironic deposits abo
+   9767.75 | Supplier#000000914        | KENYA                     |     60913 | Manufacturer#1            | li7dM9CrPF213,Jkh3MJRSRhjSB,wRMuOvidQg8u | 24-682-308-9029 | ajole. bold theodolites above the quickly ironic frets are quickly along the fur
+   9760.75 | Supplier#000009818        | ALGERIA                   |    119817 | Manufacturer#2            | 6jPfNtL1KnMUnRZdI0,TfvsiGmJbSTM4SCzEA3L  | 10-612-146-1499 | ly special instructions. final, ir
+   9727.49 | Supplier#000003660        | MOROCCO                   |     78645 | Manufacturer#4            | WkbM,vhzlbSS2y8rnnw LS4oKRT9C            | 25-956-863-7727 | erns. slowly sly pinto beans print carefully regular excuses. furio
+   9722.62 | Supplier#000001055        | MOROCCO                   |    148540 | Manufacturer#5            | euFgXSBA1XoI,V48YwL                      | 25-369-552-4996 | its cajole blithely. regular deposits use after 
+   9722.62 | Supplier#000001055        | MOROCCO                   |    163506 | Manufacturer#5            | euFgXSBA1XoI,V48YwL                      | 25-369-552-4996 | its cajole blithely. regular deposits use after 
+   9722.33 | Supplier#000006458        | ALGERIA                   |     88933 | Manufacturer#4            | 1wfeX ru80V7mKM6OQq8EVVA0                | 10-314-874-9392 | arefully along the bravely special pinto beans. quickly regular packages ca
+   9705.07 | Supplier#000003433        | ETHIOPIA                  |       932 | Manufacturer#2            | U,Ccsi8VrSqtkZ1BnPJkpzuViKtuIVOmirXtwu   | 15-334-430-7428 |  requests cajole furiously. fur
+   9705.07 | Supplier#000003433        | ETHIOPIA                  |    178398 | Manufacturer#2            | U,Ccsi8VrSqtkZ1BnPJkpzuViKtuIVOmirXtwu   | 15-334-430-7428 |  requests cajole furiously. fur
+   9640.23 | Supplier#000008591        | ALGERIA                   |    113568 | Manufacturer#3            | 3G86tepvfRxn                             | 10-546-978-5154 | instructions. furiously bold
+   9594.51 | Supplier#000000818        | MOZAMBIQUE                |    143275 | Manufacturer#2            | 78Rr rF8zcBGTSud4,5B                     | 26-754-547-4185 | es. carefully final deposits use 
+   9573.78 | Supplier#000006631        | KENYA                     |    139091 | Manufacturer#2            | oZJTRXYYSH2Ih                            | 24-622-570-7871 |  fluffily blithely regular accounts. furiousl
+   9568.89 | Supplier#000008292        | ETHIOPIA                  |    135778 | Manufacturer#5            | paQEp sV7TNxy5BkskJTZQkV                 | 15-660-195-3804 | quests nod. quickly enticing sentiments boost silently. slyly even accounts 
+   9564.51 | Supplier#000008172        | ALGERIA                   |     85663 | Manufacturer#1            | nkVf4sERrJKgUGkvamajC                    | 10-463-235-9233 | ounts play carefully unusual packages. fluffily brave instructions lose. furiously f
+   9553.61 | Supplier#000008485        | ETHIOPIA                  |    185966 | Manufacturer#4            | UKbWnxfcaS,gZklz                         | 15-711-844-1174 | lar theodolites haggle slyly foxes. express instructions cajole pending asymptotes. carefully iro
+   9493.86 | Supplier#000007843        | ETHIOPIA                  |    152812 | Manufacturer#3            | RcfSaB8NTKOeHQD 3xNGvUI6v7Qf,s9R0        | 15-985-681-6603 | n accounts integrate quickly. qui
+   9469.81 | Supplier#000003458        | MOROCCO                   |    140943 | Manufacturer#5            | AIawyKf4tIjmY5HsGCMgcAZFmeqkoL           | 25-645-475-6688 |  maintain slyly. pending, final pinto beans haggle blithely according to the ironi
+   9456.97 | Supplier#000007859        | MOZAMBIQUE                |    152828 | Manufacturer#4            | vNCd3TFRbJAOP1Gyeki                      | 26-652-585-4258 |  instructions. carefully bold foxes against the deposi
+   9424.19 | Supplier#000003946        | MOROCCO                   |    128921 | Manufacturer#1            | PRJJlZVVizUPiKY7w,TeeB5HoAiPMxzPUqx      | 25-819-326-7248 | into beans wake blithely around the ironic, final pinto beans.
+   9365.51 | Supplier#000007850        | ETHIOPIA                  |    157849 | Manufacturer#5            | AynI1tvQ0MDmkvi150qu                     | 15-879-894-8543 | ly furiously regular deposits. re
+   9362.17 | Supplier#000008782        | KENYA                     |     98781 | Manufacturer#4            | x3s6V13vML5pegjYgoO9Hg8                  | 24-221-880-2155 | old requests solve furiously regular escapades. pending dependencies sleep furio
+   9360.53 | Supplier#000004273        | MOROCCO                   |    154272 | Manufacturer#5            | oI4ZKslA6m7mvRq4X                        | 25-438-360-4251 |  blithely ironic pinto beans. blithely ironic theodolites ar
+   9356.77 | Supplier#000004902        | ALGERIA                   |     77380 | Manufacturer#2            | YdQIzRgwNou4BRRect7We                    | 10-727-814-9489 | nto beans. regular accoun
+   9330.10 | Supplier#000001678        | MOZAMBIQUE                |    181677 | Manufacturer#4            | 1hEflU5Nt,EVDdB6LZO7514 zJdRqjhc9jK      | 26-905-311-6289 | uses are regular accounts. final pinto beans would wake of th
+   9324.34 | Supplier#000009574        | ALGERIA                   |    187055 | Manufacturer#2            | zjx57 niIV6 ENacO11W6aE,aW0ohfHum        | 10-210-767-2649 | uriously after the final, pending deposits. ironic requests integrate unusual, ironic Tiresias
+   9242.91 | Supplier#000009992        | ETHIOPIA                  |     82467 | Manufacturer#3            | mngsMzPxdOOQGHAPFUH                      | 15-467-813-3355 | even dinos wake among the slyly regular ideas. furiously ironic requests wake furiously quickl
+   9169.42 | Supplier#000003470        | KENYA                     |    125933 | Manufacturer#5            | 5SnLW3RZ9s01wm1bzyMWKh0DemDKwGo          | 24-780-294-7324 | unusual dolphins boost. q
+   9166.27 | Supplier#000006821        | KENYA                     |     99293 | Manufacturer#5            | KDpvnfTk5SzlUInH78Hl1tp8S7sgkZPJ         | 24-408-920-1588 |  regular requests are around
+   9141.95 | Supplier#000002438        | MOZAMBIQUE                |    137411 | Manufacturer#2            | vVqUc3VNaWWvEZfs                         | 26-280-148-5426 | deposits. carefully final theodolites wake furiou
+   9112.98 | Supplier#000003085        | ALGERIA                   |     63084 | Manufacturer#2            | aM6i8v3jKaD                              | 10-428-575-1918 | l sauternes wake. theodolites haggle furiously. regular, bold req
+   9107.53 | Supplier#000009735        | MOROCCO                   |    124710 | Manufacturer#4            | M1ejLn7K874MMc7Cp7xHwAj                  | 25-920-872-8697 | p furiously requests. ironic requests boost carefully finally regular instruc
+   9095.64 | Supplier#000000193        | ETHIOPIA                  |    127680 | Manufacturer#4            | 0HvoBt,qEF EaKzYNCl                      | 15-872-804-8448 |  packages. regular ideas sleep about the fluffily even deposits! special dolphins nag sly
+   9091.71 | Supplier#000000463        | ALGERIA                   |    182908 | Manufacturer#5            | XOb4DatMUyqMuFM92ZRaapwsEQ               | 10-178-678-7353 | lay. deposits breach instructions. sl
+   9091.06 | Supplier#000003044        | MOROCCO                   |     30540 | Manufacturer#1            | 2zldvYuxlCiK4                            | 25-761-914-1310 | ronic courts. quickly final dep
+   9014.90 | Supplier#000002084        | ETHIOPIA                  |    159568 | Manufacturer#4            | ,zeVVYFb6hYoWyJ4kjqm8hT5lzLlW            | 15-241-499-4185 |  deposits haggle doggedly among the furiously even packages. d
+   9013.06 | Supplier#000006680        | MOROCCO                   |    106679 | Manufacturer#1            | 6P ,,FjHsgKlqSuGA0BEXdy XfYSl            | 25-937-193-2337 |  among the regular dependencies cajole carefully 
+   9013.06 | Supplier#000006680        | MOROCCO                   |    111657 | Manufacturer#3            | 6P ,,FjHsgKlqSuGA0BEXdy XfYSl            | 25-937-193-2337 |  among the regular dependencies cajole carefully 
+   9008.23 | Supplier#000005292        | ALGERIA                   |     85291 | Manufacturer#5            | sRBWIIavn0AEKUn,tc                       | 10-208-943-1119 | y according to the carefully even packages. busily unusual pla
+   8949.16 | Supplier#000008060        | MOZAMBIQUE                |    123035 | Manufacturer#3            | pZjj0ghxyfltSeN pR5u5PKgiVGhXGd          | 26-552-123-7988 | ly regular theodolites according to the asymptotes integrate e
+   8934.62 | Supplier#000003536        | ETHIOPIA                  |      8535 | Manufacturer#3            | vzCsRjennl78FjFMURrgihVJ3lie8kOJ         | 15-505-807-3709 | ly unusual excuses use furiously after the slyly fina
+   8930.48 | Supplier#000005160        | MOROCCO                   |     67641 | Manufacturer#4            | iYvEHZmj762YNHC4zRT QSLXdk               | 25-355-259-4155 | iresias nag furiously along the carefully ironic pinto beans. b
+   8930.48 | Supplier#000005160        | MOROCCO                   |    145159 | Manufacturer#1            | iYvEHZmj762YNHC4zRT QSLXdk               | 25-355-259-4155 | iresias nag furiously along the carefully ironic pinto beans. b
+   8930.01 | Supplier#000001669        | MOZAMBIQUE                |    109158 | Manufacturer#5            | 9AWkRm7kFNL3i86eTiZDjQDf,K               | 26-762-352-2798 | o beans sleep. carefully even ideas boost across the unusual ideas-- blithely exp
+   8930.01 | Supplier#000001669        | MOZAMBIQUE                |    131668 | Manufacturer#4            | 9AWkRm7kFNL3i86eTiZDjQDf,K               | 26-762-352-2798 | o beans sleep. carefully even ideas boost across the unusual ideas-- blithely exp
+   8868.12 | Supplier#000004151        | KENYA                     |     76629 | Manufacturer#2            | ZnDgZenJq19th5hf                         | 24-355-135-8448 | cial, final accounts mold slyly. final packages slee
+   8838.89 | Supplier#000002131        | ALGERIA                   |    132130 | Manufacturer#5            | TWm8VNv3,DhkeK6A3Dorsu2,v564zzHgn8       | 10-227-104-1206 |  accounts about the deposits use carefully after the dependencies. speci
+   8812.26 | Supplier#000008153        | KENYA                     |    155637 | Manufacturer#4            | 2XdXx OeLcw630eWmuJJxXkBJrqv6j39gz       | 24-838-589-7861 | ial accounts haggle slyly around the blithely ironic theodolites. fluffily even a
+   8777.14 | Supplier#000005675        | ETHIOPIA                  |     65674 | Manufacturer#2            | p6M0KpH4uNbVyySndqYgdKBIJurQnaYMXfUlXxy  | 15-997-627-7932 |  bravely pains. fluffily unusual ideas detect slyly: bold requests 
+   8759.95 | Supplier#000006755        | MOROCCO                   |     94245 | Manufacturer#3            | 2Ntn6GMUdXtbz,B4                         | 25-475-448-2362 | l, final asymptotes sleep closely quiet packages. accounts alongside of the blithely slow a
+   8757.19 | Supplier#000005053        | MOROCCO                   |     90034 | Manufacturer#1            | FFVlqmJmxMqN                             | 25-812-264-5461 | ly regular frays cajole carefully fina
+   8752.88 | Supplier#000002604        | MOROCCO                   |     42603 | Manufacturer#2            | 7Uvm3Rwch9Dk3I2Dmr35                     | 25-539-302-5578 |  pending ideas integrate carefully fin
+   8734.98 | Supplier#000008788        | MOZAMBIQUE                |     38787 | Manufacturer#1            | xA,XBK9kurq75ZQZ pM18mUOjWLtoxRjnLvt4pUl | 26-848-849-4077 | pending requests are furiously furiously special requests. slyly ironic
+   8697.12 | Supplier#000004153        | MOROCCO                   |     24152 | Manufacturer#1            | PnftHjIOKN6VUOD                          | 25-205-843-3592 | ckly idle requests cajole blithely. sl
+   8697.12 | Supplier#000004153        | MOROCCO                   |    129128 | Manufacturer#2            | PnftHjIOKN6VUOD                          | 25-205-843-3592 | ckly idle requests cajole blithely. sl
+   8697.12 | Supplier#000004153        | MOROCCO                   |    144152 | Manufacturer#4            | PnftHjIOKN6VUOD                          | 25-205-843-3592 | ckly idle requests cajole blithely. sl
+   8691.58 | Supplier#000001415        | MOZAMBIQUE                |     58909 | Manufacturer#2            | N,XLjJ8gysivwWBfUOgluVUGM                | 26-475-658-2523 | s. carefully pending requests affix blithely. ironic deposits impress carefully blith
+   8657.96 | Supplier#000006389        | ALGERIA                   |    116388 | Manufacturer#1            | hLJ01QW0RBHCuKNDT7iiiKz                  | 10-535-625-9644 | ts. furiously express accounts after the ironic dependenci
+   8641.38 | Supplier#000005161        | ETHIOPIA                  |     10158 | Manufacturer#3            | tMgynFzEyBoRhflBYqo                      | 15-585-813-7109 | uickly ironic packages haggle quic
+   8616.10 | Supplier#000003785        | KENYA                     |     91275 | Manufacturer#4            | 8S59M6PcyaZA2jrvM,dAYcr                  | 24-486-584-6949 | ial instructions. accounts eat furiously accounts. carefully regular dependencies haggle b
+   8616.10 | Supplier#000003785        | KENYA                     |    178750 | Manufacturer#2            | 8S59M6PcyaZA2jrvM,dAYcr                  | 24-486-584-6949 | ial instructions. accounts eat furiously accounts. carefully regular dependencies haggle b
+   8542.18 | Supplier#000007883        | MOZAMBIQUE                |    112860 | Manufacturer#2            | lHEVjn RqfnL4Lk,bPLs75RonEqP             | 26-136-979-7523 | ackages-- slyly even asymptotes are 
+   8509.74 | Supplier#000005640        | MOROCCO                   |     45639 | Manufacturer#2            | gry8jIFw8CqsIV                           | 25-310-531-7490 | s. furiously unusual dinos wake slyl
+   8460.28 | Supplier#000007242        | ALGERIA                   |     92223 | Manufacturer#1            | WQMe6sy53jRalzf                          | 10-888-866-9595 | olphins believe blithely according to the blithely bold theodolites. busily pending depos
+   8460.28 | Supplier#000007242        | ALGERIA                   |    197241 | Manufacturer#1            | WQMe6sy53jRalzf                          | 10-888-866-9595 | olphins believe blithely according to the blithely bold theodolites. busily pending depos
+   8424.94 | Supplier#000006238        | MOROCCO                   |    126237 | Manufacturer#4            | uJD8zM90,LL021MxuiS5RP9lV,               | 25-917-640-2121 | fluffily after the furious pinto beans. fluffily special hockey players int
+   8372.64 | Supplier#000005384        | KENYA                     |     35383 | Manufacturer#5            | 8UfrO5ayFT0o4LEnVUceS7bX                 | 24-606-992-7118 | quests haggle slyly. regularly regular accounts use evenly. quickly ironic notornis against the 
+   8372.64 | Supplier#000005384        | KENYA                     |    137844 | Manufacturer#2            | 8UfrO5ayFT0o4LEnVUceS7bX                 | 24-606-992-7118 | quests haggle slyly. regularly regular accounts use evenly. quickly ironic notornis against the 
+   8371.80 | Supplier#000002206        | MOZAMBIQUE                |     42205 | Manufacturer#2            | e3Lcyqksu2lRJu8BfUwZPYGo                 | 26-433-565-1419 |  special, express accounts
+   8368.06 | Supplier#000000492        | KENYA                     |     42979 | Manufacturer#3            | 8wEulEYM zGvMXfDNNEw4B                   | 24-875-296-5180 | y. slyly express deposits alongside of the accounts nag fluffily after the evenl
+   8365.59 | Supplier#000008745        | ETHIOPIA                  |     76237 | Manufacturer#3            | Ru150MO88CRlh1aSAWLjMOhMmiPK             | 15-816-554-6784 | ackages? ironic, ironic packages cajole slyly. i
+   8365.59 | Supplier#000008745        | ETHIOPIA                  |    123720 | Manufacturer#3            | Ru150MO88CRlh1aSAWLjMOhMmiPK             | 15-816-554-6784 | ackages? ironic, ironic packages cajole slyly. i
+   8356.10 | Supplier#000008802        | MOROCCO                   |     16300 | Manufacturer#5            | xFN0wcWSTKZClB0q5KTj                     | 25-772-695-8771 | bout the decoys. pending theodolites sleep abou
+   8317.89 | Supplier#000004865        | KENYA                     |     94864 | Manufacturer#2            | VL4FFhw49fQDMYmPulRTJ                    | 24-622-987-3854 | ar instructions was across
+   8313.52 | Supplier#000005503        | MOZAMBIQUE                |     72995 | Manufacturer#4            | cLr3quhaIWbhK                            | 26-687-835-3855 | ke among the fluffily unusual theodolites. furiously final notornis are sometimes ironically even
+   8287.19 | Supplier#000002472        | KENYA                     |    154926 | Manufacturer#3            | WkNfcNCiE5L3bpukI4C Izk5hTqDpcZ          | 24-919-741-1591 | ans nag furiously blithely silent deposits. blithely final instructions are slyly. furiously entic
+   8279.39 | Supplier#000002918        | MOZAMBIQUE                |     87901 | Manufacturer#1            | 4w rdIiue3sCYPd93ZwfJ9C6r20BjAtmhwXwiv   | 26-661-662-2802 | nding dugouts unwind furiously. regular, ironic packages i
+   8279.39 | Supplier#000002918        | MOZAMBIQUE                |    152917 | Manufacturer#5            | 4w rdIiue3sCYPd93ZwfJ9C6r20BjAtmhwXwiv   | 26-661-662-2802 | nding dugouts unwind furiously. regular, ironic packages i
+   8187.68 | Supplier#000006741        | MOZAMBIQUE                |     41732 | Manufacturer#1            | v,63qKk6xB4bH3Za0b5                      | 26-128-837-5709 |  boost fluffily after the slyly final requests. slyly special deposits boost furiously across t
+   8178.09 | Supplier#000008083        | MOZAMBIQUE                |     20576 | Manufacturer#1            | i5yvxpWnKvLsFPhxyySs20lfY 7Wj4           | 26-482-326-3165 | requests doze quickly. ideas sleep bold deposits. quickly bold theodolites use b
+   8162.76 | Supplier#000004750        | MOZAMBIQUE                |     49741 | Manufacturer#3            | uPd2OHndWaXR5P2K5qJYGMl5B3uBp4gDo5veZL6  | 26-786-191-2324 | final excuses. furiously pending deposits about the bold r
+   8123.70 | Supplier#000003889        | KENYA                     |     61382 | Manufacturer#1            | xEsTSa5oG8BjL0SJdEdCcTg2LhOguyvQ         | 24-804-460-5552 | g packages haggle according to the quickly regular frays. carefully even accounts wake f
+   8123.70 | Supplier#000003889        | KENYA                     |    116355 | Manufacturer#3            | xEsTSa5oG8BjL0SJdEdCcTg2LhOguyvQ         | 24-804-460-5552 | g packages haggle according to the quickly regular frays. carefully even accounts wake f
+   8123.70 | Supplier#000003889        | KENYA                     |    163888 | Manufacturer#5            | xEsTSa5oG8BjL0SJdEdCcTg2LhOguyvQ         | 24-804-460-5552 | g packages haggle according to the quickly regular frays. carefully even accounts wake f
+   8111.78 | Supplier#000001738        | MOROCCO                   |     59232 | Manufacturer#2            | KFD3nE8IHWbZS0prC FPV8FQnF               | 25-692-297-8993 | tithes boost slyly regular deposits. blithely express accounts sublate furiously deposits. sly
+   8081.97 | Supplier#000003557        | MOZAMBIQUE                |     71049 | Manufacturer#3            | DsMJylgjWDub YHW8Y                       | 26-156-686-5493 | . furiously bold requests are quickly
+   8076.89 | Supplier#000001782        | KENYA                     |     49277 | Manufacturer#4            | LQqd5Enn37ar,I4vANF98Yda475ImnUtnobvPBV  | 24-892-845-3113 | lly excuses. furiously express decoys are furiously. regular sheaves
+   8051.23 | Supplier#000008905        | MOZAMBIQUE                |    116393 | Manufacturer#5            | 8sELF0amidZtqTcCoLJN                     | 26-916-810-6563 | al instructions use furiously doggedly regular
+   8046.18 | Supplier#000002830        | KENYA                     |     75308 | Manufacturer#1            | ,tuLnQTihW                               | 24-143-923-5463 | e express requests doze furiously about the special sentiments
+   8022.21 | Supplier#000003296        | ALGERIA                   |    165747 | Manufacturer#2            | 0c318ax2Hbuqd9qDJwxDVmMpTM9RLSFeXsXlLHck | 10-367-244-8150 |  blithely even foxes sleep according to the furiously even ideas. express requests above the bl
+   8003.04 | Supplier#000008864        | MOZAMBIQUE                |     51348 | Manufacturer#3            | vnRhuJ8gsx3Bu                            | 26-440-604-6656 | es. slyly permanent accounts hinder according to the
+   7998.30 | Supplier#000004096        | MOZAMBIQUE                |     29091 | Manufacturer#4            | T9OqQ8TzKgDo RUuwXcEePKA6tfRKyn9hd3jVJhh | 26-638-189-2205 | . regular requests alongside o
+   7987.36 | Supplier#000009197        | ETHIOPIA                  |    156681 | Manufacturer#4            | kTmXwb9rsaQU3sJiE65                      | 15-441-453-4938 | lar requests haggle slowly about the pinto beans. regular deposits haggle blithely blithe
+   7982.28 | Supplier#000004808        | KENYA                     |    179773 | Manufacturer#3            | Y4dpiCheUoz8MjrLgTb cPQzGphr9hPoLo2i12   | 24-647-745-8200 | eep slyly final tithes. ideas among the final, bold instructions haggle into the quickly ironi
+(100 rows)
+
+2018-12-05-22:56:51: elaspe_time = 0.456 seconds
+-------------------------------------------------------
+2018-12-05-22:56:51: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/3.sql
+ l_orderkey |   revenue   | o_orderdate | o_shippriority 
+------------+-------------+-------------+----------------
+     950759 | 405195.7089 | 1995-02-21  |              0
+    2113221 | 400959.3634 | 1995-02-19  |              0
+    1902471 | 400497.3847 | 1995-03-01  |              0
+     519556 | 390030.5160 | 1995-02-15  |              0
+    2529826 | 387365.1560 | 1995-02-17  |              0
+    2707908 | 383352.7514 | 1995-02-23  |              0
+    3900355 | 379078.4143 | 1995-02-13  |              0
+    2906022 | 370116.1556 | 1995-02-27  |              0
+    1062786 | 368331.4043 | 1995-02-10  |              0
+    4261541 | 367205.1068 | 1995-02-19  |              0
+(10 rows)
+
+2018-12-05-22:56:52: elaspe_time = 0.547 seconds
+-------------------------------------------------------
+2018-12-05-22:56:52: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/4.sql
+ o_orderpriority | order_count 
+-----------------+-------------
+ 1-URGENT        |       10414
+(1 row)
+
+2018-12-05-22:56:52: elaspe_time = 0.265 seconds
+-------------------------------------------------------
+2018-12-05-22:56:52: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/5.sql
+          n_name           |    revenue    
+---------------------------+---------------
+ IRAQ                      | 60149107.3081
+(1 row)
+
+2018-12-05-22:56:53: elaspe_time = 0.588 seconds
+-------------------------------------------------------
+2018-12-05-22:56:53: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/6.sql
+    revenue    
+---------------
+ 82523007.4858
+(1 row)
+
+2018-12-05-22:56:53: elaspe_time = 0.547 seconds
+-------------------------------------------------------
+2018-12-05-22:56:53: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/7.sql
+        supp_nation        |        cust_nation        | l_year |    revenue    
+---------------------------+---------------------------+--------+---------------
+ FRANCE                    | IRAN                      |   1995 | 53484151.5761
+(1 row)
+
+2018-12-05-22:56:54: elaspe_time = 0.685 seconds
+-------------------------------------------------------
+2018-12-05-22:56:54: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/8.sql
+ o_year |       mkt_share        
+--------+------------------------
+   1995 | 0.04018209140274305212
+(1 row)
+
+2018-12-05-22:56:55: elaspe_time = 0.822 seconds
+-------------------------------------------------------
+2018-12-05-22:56:55: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/9.sql
+          nation           | o_year |  sum_profit   
+---------------------------+--------+---------------
+ ALGERIA                   |   1998 | 28700187.8890
+(1 row)
+
+2018-12-05-22:56:57: elaspe_time = 2.034 seconds
+-------------------------------------------------------
+2018-12-05-22:56:57: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/10.sql
+ c_custkey |       c_name       |   revenue   | c_acctbal |          n_name           |                c_address                 |     c_phone     |                                                     c_comment                                                      
+-----------+--------------------+-------------+-----------+---------------------------+------------------------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------
+    117586 | Customer#000117586 | 782529.8776 |   4967.23 | BRAZIL                    | B4ZnfqOBIvkG2E1Yd                        | 12-118-132-4034 | y. slyly careful asymptotes haggle carefully slyly qui
+     12004 | Customer#000012004 | 667424.0692 |   3877.21 | MOZAMBIQUE                | iq2QaU,1cJUEJwpNDUWxvx1tUu60WPgmwnNNCNK  | 26-771-863-2556 | riously even accounts. final instructions wake slyly. slyly final foxes affix c
+    129955 | Customer#000129955 | 651058.8116 |   3822.78 | INDIA                     | c8hs1G3UlBhpLVZRUTVS20sQ96uacLfp h       | 18-915-267-2078 | final, final instructions. slyly busy pinto beans cajole permanently quick 
+     80593 | Customer#000080593 | 641152.4436 |   5247.34 | INDIA                     | JMiIo8jWtuNho,4qDz0we27dNXalNgqJC        | 18-890-536-9276 | e furiously. thinly even requests nag unusual requests. caref
+    146741 | Customer#000146741 | 637597.3944 |   8477.38 | CHINA                     | emLgxbPn8Sdv3BSHYRtFmZZc7AbyIyuAdGzTGCXD | 28-720-183-4424 | regular foxes. pending excuses among the slyly regular ideas unwind carefully after t
+     20782 | Customer#000020782 | 615939.9862 |   5379.43 | INDIA                     | A5fHyrW0JenaOQle4yezwY0kY0pm8jEKWKQYyr   | 18-532-941-2752 |  blithely about the furiously silent orbits. ironic deposits haggle quickly requests. bli
+    120640 | Customer#000120640 | 611711.5216 |   9010.67 | JORDAN                    | BmEaT65HMOieGJY1hMoH5NDMsvOOcK8HiTc      | 23-975-945-1368 | etect fluffily. slyly silent accounts boost about the carefully ironic theodolites. ironic 
+      5494 | Customer#000005494 | 604768.4707 |   4395.28 | KENYA                     | XvN94NavHB s7IH37rZWAsn16C               | 24-327-597-4131 | brave accounts. silent excuses are furiously blithely express requests. ironic fra
+     73900 | Customer#000073900 | 596220.7583 |   9459.26 | ETHIOPIA                  | j,aqi3UNWmAJxMLkneguY,aHR                | 15-167-507-6693 | yly. regular, blithe requests haggle blithely furiously bold mul
+     73558 | Customer#000073558 | 595419.9984 |   1923.73 | UNITED KINGDOM            | 49HEYlMY6fcqx7JDwzmULqc7                 | 33-463-356-6222 | final ideas sleep blithely final ideas. blithely final theodolites sleep fur
+     88684 | Customer#000088684 | 587836.8753 |    631.24 | KENYA                     | EKXaOGt2m0C4XwrW                         | 24-669-503-9939 | thely regular deposits across the quiet ideas cajole depe
+    136678 | Customer#000136678 | 576303.5940 |   9863.74 | GERMANY                   | eAB1OCxQVEurcZphl0Nr4                    | 17-642-321-3561 |  sleep carefully. carefully regular tithes are furiously express requests. ironic, silent reques
+     23345 | Customer#000023345 | 574204.2111 |   3828.12 | JORDAN                    | bbIdISbeiFZGb                            | 23-431-652-9983 | long the final requests. quickly special packages haggle carefully. final theodolites are fluffily at the furiousl
+     12994 | Customer#000012994 | 572932.1112 |   5094.59 | ALGERIA                   | dUNPBZd9xN8                              | 10-920-440-5801 | s wake carefully after the carefully pending accounts. furious
+      7834 | Customer#000007834 | 568991.0113 |   1157.44 | IRAQ                      | IE6KqGoJW7chfilobCCDFrrxVnCWFwL8sdFg5W   | 21-734-793-5086 | slyly boldly regular requests. sometimes final instructions hang slyly special excuses. daring Tiresias slee
+    119071 | Customer#000119071 | 565064.2989 |   8319.62 | ROMANIA                   | NK3DXgERKWKs8SjNsJbOcP7                  | 29-231-387-9085 | ages cajole. ironic, silent dolphins according to the carefully pending requests cajole fluffily blithely regula
+       127 | Customer#000000127 | 562601.7823 |   9280.71 | VIETNAM                   | Xyge4DX2rXKxXyye1Z47LeLVEYMLf4Bfcj       | 31-101-672-2951 | ic, unusual theodolites nod silently after the final, ironic instructions: pending r
+     28480 | Customer#000028480 | 561041.0730 |   -572.23 | CHINA                     | HSj7AFc4OyHImjgZrRMaj6C                  | 28-719-299-2580 | ely unusual deposits are. sly asy
+     70054 | Customer#000070054 | 555493.0272 |   -244.35 | JAPAN                     | HHDr2woIsC99Xh ku19z,qZxmk1vfP5jhr       | 22-764-678-5276 | y pending deposits along the quickly bold foxes doze above the packages. fl
+     86632 | Customer#000086632 | 549110.0820 |   8963.27 | BRAZIL                    | 7wm85ci6dkuOgIWb,UnGpSWXiQEdd08n         | 12-886-767-2441 | es about the furiously unusual theodolites use about the special theodolites. f
+(20 rows)
+
+2018-12-05-22:56:57: elaspe_time = 0.640 seconds
+-------------------------------------------------------
+2018-12-05-22:56:57: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/11.sql
+ ps_partkey |    value    
+------------+-------------
+       4877 | 18980009.12
+(1 row)
+
+2018-12-05-22:56:58: elaspe_time = 0.171 seconds
+-------------------------------------------------------
+2018-12-05-22:56:58: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/12.sql
+ l_shipmode | high_line_count | low_line_count 
+------------+-----------------+----------------
+ FOB        |            6335 |           9242
+(1 row)
+
+2018-12-05-22:56:58: elaspe_time = 0.676 seconds
+-------------------------------------------------------
+2018-12-05-22:56:58: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/13.sql
+ c_count | custdist 
+---------+----------
+       0 |    50005
+(1 row)
+
+2018-12-05-22:57:00: elaspe_time = 1.992 seconds
+-------------------------------------------------------
+2018-12-05-22:57:00: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/14.sql
+    promo_revenue    
+---------------------
+ 16.4333909269891290
+(1 row)
+
+2018-12-05-22:57:01: elaspe_time = 0.416 seconds
+-------------------------------------------------------
+2018-12-05-22:57:01: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/15.sql
+CREATE VIEW
+ s_suppkey |          s_name           | s_address  |     s_phone     | total_revenue 
+-----------+---------------------------+------------+-----------------+---------------
+      5902 | Supplier#000005902        | rb4HvSpgYH | 14-930-257-5773 |  1932307.3183
+(1 row)
+
+DROP VIEW
+2018-12-05-22:57:02: elaspe_time = 1.633 seconds
+-------------------------------------------------------
+2018-12-05-22:57:02: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/16.sql
+  p_brand   |        p_type         | p_size | supplier_cnt 
+------------+-----------------------+--------+--------------
+ Brand#34   | STANDARD PLATED BRASS |      4 |           28
+(1 row)
+
+2018-12-05-22:57:03: elaspe_time = 0.854 seconds
+-------------------------------------------------------
+2018-12-05-22:57:03: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/17.sql
+     avg_yearly      
+---------------------
+ 292667.760000000000
+(1 row)
+
+2018-12-05-22:57:06: elaspe_time = 2.426 seconds
+-------------------------------------------------------
+2018-12-05-22:57:06: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/18.sql
+       c_name       | c_custkey | o_orderkey | o_orderdate | o_totalprice |  sum   
+--------------------+-----------+------------+-------------+--------------+--------
+ Customer#000128120 |    128120 |    4722021 | 1994-04-07  |    544089.09 | 323.00
+ Customer#000144617 |    144617 |    3043270 | 1997-02-12  |    530604.44 | 317.00
+ Customer#000066790 |     66790 |    2199712 | 1996-09-30  |    515531.82 | 327.00
+ Customer#000015619 |     15619 |    3767271 | 1996-08-07  |    480083.96 | 318.00
+ Customer#000147197 |    147197 |    1263015 | 1997-02-02  |    467149.67 | 320.00
+ Customer#000117919 |    117919 |    2869152 | 1996-06-20  |    456815.92 | 317.00
+ Customer#000126865 |    126865 |    4702759 | 1994-11-07  |    447606.65 | 320.00
+ Customer#000036619 |     36619 |    4806726 | 1995-01-17  |    446704.09 | 328.00
+ Customer#000119989 |    119989 |    1544643 | 1997-09-20  |    434568.25 | 320.00
+(9 rows)
+
+2018-12-05-22:57:10: elaspe_time = 4.069 seconds
+-------------------------------------------------------
+2018-12-05-22:57:10: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/19.sql
+   revenue    
+--------------
+ 3106996.3913
+(1 row)
+
+2018-12-05-22:57:10: elaspe_time = 0.069 seconds
+-------------------------------------------------------
+2018-12-05-22:57:10: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/20.sql
+          s_name           |           s_address           
+---------------------------+-------------------------------
+ Supplier#000000063        | NlV0OQyIoPvPkw5AYuWGomX,hgqm1
+(1 row)
+
+2018-12-05-22:57:12: elaspe_time = 2.633 seconds
+-------------------------------------------------------
+2018-12-05-22:57:12: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/21.sql
+          s_name           | numwait 
+---------------------------+---------
+ Supplier#000000657        |      20
+ Supplier#000005855        |      19
+ Supplier#000009709        |      19
+ Supplier#000002020        |      18
+ Supplier#000003679        |      18
+ Supplier#000005076        |      18
+ Supplier#000005505        |      18
+ Supplier#000007675        |      18
+ Supplier#000003423        |      17
+ Supplier#000006217        |      17
+ Supplier#000003062        |      16
+ Supplier#000004522        |      16
+ Supplier#000004588        |      16
+ Supplier#000004769        |      16
+ Supplier#000005300        |      16
+ Supplier#000009846        |      16
+ Supplier#000001730        |      15
+ Supplier#000002265        |      15
+ Supplier#000003169        |      15
+ Supplier#000003288        |      15
+ Supplier#000003441        |      15
+ Supplier#000003481        |      15
+ Supplier#000004701        |      15
+ Supplier#000005426        |      15
+ Supplier#000007146        |      15
+ Supplier#000007322        |      15
+ Supplier#000007448        |      15
+ Supplier#000008150        |      15
+ Supplier#000008168        |      15
+ Supplier#000008224        |      15
+ Supplier#000009445        |      15
+ Supplier#000009961        |      15
+ Supplier#000002022        |      14
+ Supplier#000002272        |      14
+ Supplier#000002460        |      14
+ Supplier#000002960        |      14
+ Supplier#000003403        |      14
+ Supplier#000003561        |      14
+ Supplier#000003625        |      14
+ Supplier#000003656        |      14
+ Supplier#000005000        |      14
+ Supplier#000005195        |      14
+ Supplier#000005542        |      14
+ Supplier#000005797        |      14
+ Supplier#000006093        |      14
+ Supplier#000006297        |      14
+ Supplier#000006478        |      14
+ Supplier#000007340        |      14
+ Supplier#000007801        |      14
+ Supplier#000007926        |      14
+ Supplier#000008131        |      14
+ Supplier#000008484        |      14
+ Supplier#000008872        |      14
+ Supplier#000008879        |      14
+ Supplier#000009359        |      14
+ Supplier#000009862        |      14
+ Supplier#000009869        |      14
+ Supplier#000009974        |      14
+ Supplier#000000197        |      13
+ Supplier#000001399        |      13
+ Supplier#000001726        |      13
+ Supplier#000001855        |      13
+ Supplier#000002799        |      13
+ Supplier#000003087        |      13
+ Supplier#000004371        |      13
+ Supplier#000004884        |      13
+ Supplier#000004961        |      13
+ Supplier#000006099        |      13
+ Supplier#000006435        |      13
+ Supplier#000006493        |      13
+ Supplier#000006607        |      13
+ Supplier#000006728        |      13
+ Supplier#000006761        |      13
+ Supplier#000007589        |      13
+ Supplier#000008090        |      13
+ Supplier#000008753        |      13
+ Supplier#000009152        |      13
+ Supplier#000009506        |      13
+ Supplier#000009718        |      13
+ Supplier#000000287        |      12
+ Supplier#000000475        |      12
+ Supplier#000000640        |      12
+ Supplier#000000744        |      12
+ Supplier#000001245        |      12
+ Supplier#000001446        |      12
+ Supplier#000001752        |      12
+ Supplier#000001958        |      12
+ Supplier#000002204        |      12
+ Supplier#000002241        |      12
+ Supplier#000002243        |      12
+ Supplier#000002373        |      12
+ Supplier#000002444        |      12
+ Supplier#000003089        |      12
+ Supplier#000003380        |      12
+ Supplier#000003448        |      12
+ Supplier#000003528        |      12
+ Supplier#000003652        |      12
+ Supplier#000004059        |      12
+ Supplier#000004165        |      12
+ Supplier#000005100        |      12
+(100 rows)
+
+2018-12-05-22:57:13: elaspe_time = 0.988 seconds
+-------------------------------------------------------
+2018-12-05-22:57:13: run query /home/grid/eipi10/tpch/queries/db/postgresql/4/22.sql
+ cntrycode | numcust | totacctbal 
+-----------+---------+------------
+ 10        |     883 | 6611074.25
+(1 row)
+
+2018-12-05-22:57:14: elaspe_time = 0.218 seconds
+-------------------------------------------------------
+2018-12-05-22:57:14: finish tpc-h with batch_id=4 on tpch_1g
