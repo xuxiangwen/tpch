@@ -1,4 +1,4 @@
--- using 1543973415 as a seed to the RNG
+-- using 7143 as a seed to the RNG
 
 
 explain select
@@ -11,6 +11,6 @@ where
 	p_partkey = l_partkey
 	and agg_partkey = l_partkey
 	and p_brand = 'Brand#54'
-	and p_container = 'JUMBO PKG'
+	and p_container = 'MED BAG'
 	and l_quantity < avg_quantity
 LIMIT 1;

@@ -1,4 +1,4 @@
--- using 1543973414 as a seed to the RNG
+-- using 7486 as a seed to the RNG
 
 
 select
@@ -9,9 +9,9 @@ from
 where
 	(
 		p_partkey = l_partkey
-		and p_brand = 'Brand#42'
+		and p_brand = 'Brand#22'
 		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
-		and l_quantity >= 7 and l_quantity <= 7 + 10
+		and l_quantity >= 6 and l_quantity <= 6 + 10
 		and p_size between 1 and 5
 		and l_shipmode in ('AIR', 'AIR REG')
 		and l_shipinstruct = 'DELIVER IN PERSON'
@@ -19,9 +19,9 @@ where
 	or
 	(
 		p_partkey = l_partkey
-		and p_brand = 'Brand#21'
+		and p_brand = 'Brand#11'
 		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
-		and l_quantity >= 13 and l_quantity <= 13 + 10
+		and l_quantity >= 14 and l_quantity <= 14 + 10
 		and p_size between 1 and 10
 		and l_shipmode in ('AIR', 'AIR REG')
 		and l_shipinstruct = 'DELIVER IN PERSON'
@@ -29,9 +29,9 @@ where
 	or
 	(
 		p_partkey = l_partkey
-		and p_brand = 'Brand#24'
+		and p_brand = 'Brand#23'
 		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
-		and l_quantity >= 27 and l_quantity <= 27 + 10
+		and l_quantity >= 22 and l_quantity <= 22 + 10
 		and p_size between 1 and 15
 		and l_shipmode in ('AIR', 'AIR REG')
 		and l_shipinstruct = 'DELIVER IN PERSON'

@@ -1,4 +1,4 @@
--- using 1543973415 as a seed to the RNG
+-- using 24355 as a seed to the RNG
 
 
 select
@@ -11,7 +11,7 @@ from
 where
 	ps_suppkey = s_suppkey
 	and s_nationkey = n_nationkey
-	and n_name = 'ROMANIA'
+	and n_name = 'INDONESIA'
 group by
 	ps_partkey having
 		sum(ps_supplycost * ps_availqty) > (
@@ -24,7 +24,7 @@ group by
 			where
 				ps_suppkey = s_suppkey
 				and s_nationkey = n_nationkey
-				and n_name = 'ROMANIA'
+				and n_name = 'INDONESIA'
 		)
 order by
 	value desc

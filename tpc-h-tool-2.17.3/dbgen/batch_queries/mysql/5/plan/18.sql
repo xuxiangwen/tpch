@@ -1,4 +1,4 @@
--- using 1543973415 as a seed to the RNG
+-- using 7143 as a seed to the RNG
 
 
 explain select

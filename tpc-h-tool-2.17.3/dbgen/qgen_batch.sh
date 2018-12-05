@@ -3,23 +3,25 @@
 script=$(readlink -f "$0")
 script_path=$(dirname "$script")
 
-base_path=$script_path
+base_path=${1:-$script_path}
 target_path=$base_path/batch_queries
-times=${1:-10}
-db_list=${1:-mysql postgresql redshift}
+times=${2:-10}
+db_list=${3:-mysql postgresql redshift}
 
-cd $base_path
-rm -rf $target_path
+origin_path=`pwd`
+cd $script_path
+rm -rf $target_path/*
 mkdir -p $target_path
 
 echo `date +%Y-%m-%d-%H:%M:%S`: start batch generating queries
 for i in `seq 1 $times`
 do
+  rand=$RANDOM
   echo `date +%Y-%m-%d-%H:%M:%S`: generating batch $i
   for q in `seq 1 22`
   do
     # generating sql
-    DSS_QUERY=templates ./qgen $q >> $target_path/$q.sql  
+    DSS_QUERY=templates ./qgen -r $rand $q > $target_path/$q.sql  
 	
 	#  move sql to the specific database 	
     for db in $db_list
@@ -42,5 +44,5 @@ do
     rm -rf $target_path/$q.sql 
   done
 done
-
+cd $origin_path
 echo `date +%Y-%m-%d-%H:%M:%S`: finish batch generating queries

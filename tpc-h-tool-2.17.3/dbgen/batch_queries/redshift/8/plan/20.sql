@@ -1,4 +1,4 @@
--- using 1543973417 as a seed to the RNG
+-- using 8210 as a seed to the RNG
 
 
 explain select
@@ -36,12 +36,12 @@ where
 				from
 					part
 				where
-					p_name like 'medium%'
+					p_name like 'midnight%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'SAUDI ARABIA'
+	and n_name = 'JAPAN'
 order by
 	s_name
 LIMIT 1;

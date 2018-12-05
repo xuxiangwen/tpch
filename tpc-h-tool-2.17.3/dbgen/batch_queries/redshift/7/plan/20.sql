@@ -1,4 +1,4 @@
--- using 1543973416 as a seed to the RNG
+-- using 4 as a seed to the RNG
 
 
 explain select
@@ -36,12 +36,12 @@ where
 				from
 					part
 				where
-					p_name like 'brown%'
+					p_name like 'papaya%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'ETHIOPIA'
+	and n_name = 'INDIA'
 order by
 	s_name
 LIMIT 1;
