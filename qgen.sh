@@ -3,15 +3,18 @@
 script=$(readlink -f "$0")
 script_path=$(dirname "$script")
 
-base_path=${1:-$script_path}
-target_path=$base_path/batch_queries
-times=${2:-10}
-db_list=${3:-mysql postgresql redshift}
+template_path=$script_path/queries/templates
+target_path=$script_path/queries/db
+times=${1:-10}
+db_list=${2:-mysql postgresql redshift}
 
 origin_path=`pwd`
-cd $script_path
-rm -rf $target_path/*
-mkdir -p $target_path
+
+for db in $db_list
+do
+  rm -rf $target_path/$db
+  mkdir -p $target_path/$db
+done
 
 echo `date +%Y-%m-%d-%H:%M:%S`: start batch generating queries
 for i in `seq 1 $times`
@@ -21,7 +24,8 @@ do
   for q in `seq 1 22`
   do
     # generating sql
-    DSS_QUERY=templates ./qgen -r $rand $q > $target_path/$q.sql  
+    cd $script_path/tpc-h-tool/dbgen
+    DSS_QUERY=$template_path ./qgen -r $rand $q > $target_path/$q.sql  
 	
 	#  move sql to the specific database 	
     for db in $db_list
