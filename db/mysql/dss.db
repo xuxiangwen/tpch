@@ -1,0 +1,24 @@
+drop database tpch_1g;
+drop database tpch_3g;
+drop database tpch_10g;
+drop database tpch_30g;
+drop database tpch_100g;
+drop user 'tpch'@'%';
+
+CEATE USER 'tpch'@'%' IDENTIFIED BY '***REMOVED***';
+
+CREATE DATABASE tpch_1g;
+CREATE DATABASE tpch_3g;
+CREATE DATABASE tpch_10g;
+CREATE DATABASE tpch_30g;
+CREATE DATABASE tpch_100g;
+
+GRANT ALL ON tpch_1g.* to 'tpch'@'%';
+GRANT ALL ON tpch_3g.* to 'tpch'@'%';
+GRANT ALL ON tpch_10g.* to 'tpch'@'%';
+GRANT ALL ON tpch_30g.* to 'tpch'@'%';
+GRANT ALL ON tpch_100g.* to 'tpch'@'%';
+-- GRANT LOAD FROM S3 ON *.* TO 'tpch'@'%';
+
+show databases;
+show grants for tpch;
