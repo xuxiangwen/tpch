@@ -3,9 +3,9 @@ drop database tpch_3g;
 drop database tpch_10g;
 drop database tpch_30g;
 drop database tpch_100g;
-drop user 'tpch'@'%';
+drop user tpch;
 
-CEATE USER 'tpch'@'%' IDENTIFIED BY '***REMOVED***';
+CREATE USER 'tpch'@'%' IDENTIFIED BY '***REMOVED***';
 
 CREATE DATABASE tpch_1g;
 CREATE DATABASE tpch_3g;

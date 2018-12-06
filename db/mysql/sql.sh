@@ -10,6 +10,6 @@ user=${3:-$db_user}
 password=${4:-$db_password}  
 server=${5:-$db_server}
 
-#echo PGPASSWORD=$password psql -h $server -U $user -d $db  -p $db_port -c "..."
 echo $sql
-PGPASSWORD=$password psql -h $server -U $user -d $db  -p $db_port -c "$sql"
+mysql  -h $server -f -u $user -p$password  -P $db_port $db  -e "$sql"
+

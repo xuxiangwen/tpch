@@ -17,10 +17,11 @@ do
   do
     echo `date +%Y-%m-%d-%H:%M:%S`: load $table
     cd $data_path/${scale}g
-    $script_path/sql.sh "\COPY $table FROM $table.csv WITH DELIMITER AS '|';"  tpch_${scale}g 
+    $script_path/sql.sh "load data local INFILE '$table.tbl' INTO TABLE $table FIELDS TERMINATED BY '|';"  tpch_${scale}g 
   done
-  $script_path/sql_file.sh $script_path/dss.check  tpch_${scale}g 
   echo `date +%Y-%m-%d-%H:%M:%S`: finish load ${scale}g data
+  $script_path/sql_file.sh $script_path/dss.check  tpch_${scale}g 
+  echo `date +%Y-%m-%d-%H:%M:%S`: done
   echo -----------------------------------------------------------
 done
 

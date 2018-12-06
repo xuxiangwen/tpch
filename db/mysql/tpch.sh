@@ -30,7 +30,7 @@ while [ $i -lt $n ]
 do
   echo '-------------------------------------------------------' | tee -a $log_path
   echo `date +%Y-%m-%d-%H:%M:%S`: run query $query_path/$batch_id/$i.sql  | tee -a $log_path
-  elasped_time="$(time (PGPASSWORD=$db_password psql -h $db_server -U $db_user -d tpch_${scale}g -p $db_port -f $query_path/$batch_id/$i.sql >> $log_path) 2>&1 )"
+  elasped_time="$(time (mysql  -h $db_server -u $db_user -p$db_password  -P 3306 tpch_${scale}g < $query_path/$batch_id/$i.sql >> $log_path) 2>&1 )"
   echo `date +%Y-%m-%d-%H:%M:%S`: elaspe_time = $elasped_time seconds | tee -a $log_path
   echo "$instance,$database,$test_time,tpch_${scale}g,$batch_id,$i,$elasped_time" >> $output_path
   i=`expr $i + 1`

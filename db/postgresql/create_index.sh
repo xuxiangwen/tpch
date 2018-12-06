@@ -10,6 +10,11 @@ for scale in $scale_list
 do
   echo -----------------------------------------------------------
   echo `date +%Y-%m-%d-%H:%M:%S`: start building primary keys and indexes
-  $script_path/sql_file.sh $script_path/dss.index tpch_${scale}g 
+
+  while read line
+  do 
+    echo `date +%Y-%m-%d-%H:%M:%S`: $line
+    $script_path/sql.sh "$line" tpch_${scale}g
+  done < $script_path/dss.index
   echo `date +%Y-%m-%d-%H:%M:%S`: finish building primary keys and indexes
 done
