@@ -40,5 +40,4 @@ from
 group by
 	o_year
 order by
-	o_year
-LIMIT 1;
+	o_year;

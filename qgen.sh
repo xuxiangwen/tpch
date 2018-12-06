@@ -42,6 +42,10 @@ do
          sed -i "s/1\ years/1\ year/g" $query_path/$q.sql
          sed -i "s/'\ day/\ days'/g" $query_path/$q.sql        
          sed -i "s/1\ days/1\ day/g" $query_path/$q.sql 
+         
+         echo set enable_result_cache_for_session to off\; > $query_path/$q.sql.temp
+         cat $query_path/$q.sql >> $query_path/$q.sql.temp
+         mv $query_path/$q.sql.temp $query_path/$q.sql  
       fi
       sed 's/^select/explain select/' $query_path/$q.sql > $explain_path/$q.sql
     done
