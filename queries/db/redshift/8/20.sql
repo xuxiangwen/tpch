@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 25816 as a seed to the RNG
+-- using 26078 as a seed to the RNG
 
 
 select
@@ -37,12 +37,12 @@ where
 				from
 					part
 				where
-					p_name like 'sandy%'
+					p_name like 'cornsilk%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'ALGERIA'
+	and n_name = 'INDIA'
 order by
 	s_name
 LIMIT 1;

@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 22544 as a seed to the RNG
+-- using 22032 as a seed to the RNG
 
 
 explain select
@@ -28,8 +28,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'INDIA' and n2.n_name = 'ARGENTINA')
-				or (n1.n_name = 'ARGENTINA' and n2.n_name = 'INDIA')
+				(n1.n_name = 'CHINA' and n2.n_name = 'FRANCE')
+				or (n1.n_name = 'FRANCE' and n2.n_name = 'CHINA')
 			)
 			and l_shipdate between date '1995-01-01' and date '1996-12-31'
 	) as shipping
@@ -40,5 +40,4 @@ group by
 order by
 	supp_nation,
 	cust_nation,
-	l_year
-LIMIT 1;
+	l_year;

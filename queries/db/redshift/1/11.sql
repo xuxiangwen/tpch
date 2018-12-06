@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 32614 as a seed to the RNG
+-- using 10070 as a seed to the RNG
 
 
 select
@@ -12,7 +12,7 @@ from
 where
 	ps_suppkey = s_suppkey
 	and s_nationkey = n_nationkey
-	and n_name = 'FRANCE'
+	and n_name = 'JORDAN'
 group by
 	ps_partkey having
 		sum(ps_supplycost * ps_availqty) > (
@@ -25,7 +25,7 @@ group by
 			where
 				ps_suppkey = s_suppkey
 				and s_nationkey = n_nationkey
-				and n_name = 'FRANCE'
+				and n_name = 'JORDAN'
 		)
 order by
 	value desc

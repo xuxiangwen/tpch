@@ -1,4 +1,4 @@
--- using 22544 as a seed to the RNG
+-- using 22032 as a seed to the RNG
 
 
 select
@@ -20,7 +20,7 @@ where
 			lineitem
 		group by
 			l_orderkey having
-				sum(l_quantity) > 314
+				sum(l_quantity) > 313
 	)
 	and c_custkey = o_custkey
 	and o_orderkey = l_orderkey

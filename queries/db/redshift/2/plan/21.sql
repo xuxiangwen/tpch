@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 13137 as a seed to the RNG
+-- using 10040 as a seed to the RNG
 
 
 explain select
@@ -35,7 +35,7 @@ where
 			and l3.l_receiptdate > l3.l_commitdate
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'CANADA'
+	and n_name = 'EGYPT'
 group by
 	s_name
 order by

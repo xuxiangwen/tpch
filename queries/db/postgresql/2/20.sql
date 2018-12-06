@@ -1,4 +1,4 @@
--- using 13137 as a seed to the RNG
+-- using 10040 as a seed to the RNG
 
 
 select
@@ -36,12 +36,12 @@ where
 				from
 					part
 				where
-					p_name like 'magenta%'
+					p_name like 'midnight%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'INDONESIA'
+	and n_name = 'INDIA'
 order by
 	s_name
 LIMIT 1;

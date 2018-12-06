@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 2214 as a seed to the RNG
+-- using 6807 as a seed to the RNG
 
 
 explain select

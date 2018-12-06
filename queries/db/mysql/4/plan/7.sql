@@ -1,4 +1,4 @@
--- using 2214 as a seed to the RNG
+-- using 6807 as a seed to the RNG
 
 
 explain select
@@ -39,5 +39,4 @@ group by
 order by
 	supp_nation,
 	cust_nation,
-	l_year
-LIMIT 1;
+	l_year;

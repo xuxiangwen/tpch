@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 28172 as a seed to the RNG
+-- using 21527 as a seed to the RNG
 
 
 select
@@ -7,8 +7,7 @@ select
 from
 	lineitem
 where
-	l_shipdate >= date '1994-01-01'
-	and l_shipdate < date '1994-01-01' + interval '1 year'
+	l_shipdate >= date '1996-01-01'
+	and l_shipdate < date '1996-01-01' + interval '1 year'
 	and l_discount between 0.09 - 0.01 and 0.09 + 0.01
-	and l_quantity < 24
-LIMIT 1;
+	and l_quantity < 24 ;

@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 24993 as a seed to the RNG
+-- using 26478 as a seed to the RNG
 
 
 select
@@ -15,8 +15,8 @@ where
 	c_mktsegment = 'AUTOMOBILE'
 	and c_custkey = o_custkey
 	and l_orderkey = o_orderkey
-	and o_orderdate < date '1995-03-14'
-	and l_shipdate > date '1995-03-14'
+	and o_orderdate < date '1995-03-19'
+	and l_shipdate > date '1995-03-19'
 group by
 	l_orderkey,
 	o_orderdate,

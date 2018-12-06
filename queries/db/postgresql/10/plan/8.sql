@@ -1,10 +1,10 @@
--- using 12237 as a seed to the RNG
+-- using 5241 as a seed to the RNG
 
 
 explain select
 	o_year,
 	sum(case
-		when nation = 'JORDAN' then volume
+		when nation = 'EGYPT' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -32,10 +32,9 @@ from
 			and r_name = 'MIDDLE EAST'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'PROMO ANODIZED TIN'
+			and p_type = 'ECONOMY BURNISHED STEEL'
 	) as all_nations
 group by
 	o_year
 order by
-	o_year
-LIMIT 1;
+	o_year;

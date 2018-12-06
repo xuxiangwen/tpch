@@ -1,4 +1,4 @@
--- using 25816 as a seed to the RNG
+-- using 26078 as a seed to the RNG
 
 
 select
@@ -25,12 +25,11 @@ from
 			and p_partkey = l_partkey
 			and o_orderkey = l_orderkey
 			and s_nationkey = n_nationkey
-			and p_name like '%aquamarine%'
+			and p_name like '%tan%'
 	) as profit
 group by
 	nation,
 	o_year
 order by
 	nation,
-	o_year desc
-LIMIT 1;
+	o_year desc;

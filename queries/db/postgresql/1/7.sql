@@ -1,4 +1,4 @@
--- using 32614 as a seed to the RNG
+-- using 10070 as a seed to the RNG
 
 
 select
@@ -27,8 +27,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'JAPAN' and n2.n_name = 'KENYA')
-				or (n1.n_name = 'KENYA' and n2.n_name = 'JAPAN')
+				(n1.n_name = 'EGYPT' and n2.n_name = 'JAPAN')
+				or (n1.n_name = 'JAPAN' and n2.n_name = 'EGYPT')
 			)
 			and l_shipdate between date '1995-01-01' and date '1996-12-31'
 	) as shipping
@@ -39,5 +39,4 @@ group by
 order by
 	supp_nation,
 	cust_nation,
-	l_year
-LIMIT 1;
+	l_year;

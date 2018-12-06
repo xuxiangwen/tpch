@@ -1,4 +1,4 @@
--- using 24993 as a seed to the RNG
+-- using 26478 as a seed to the RNG
 
 
 select
@@ -7,8 +7,8 @@ select
 from
 	orders
 where
-	o_orderdate >= date '1995-03-01'
-	and o_orderdate < date '1995-03-01' + interval '3' month
+	o_orderdate >= date '1995-12-01'
+	and o_orderdate < date '1995-12-01' + interval '3' month
 	and exists (
 		select
 			*

@@ -1,10 +1,10 @@
--- using 22544 as a seed to the RNG
+-- using 22032 as a seed to the RNG
 
 
 select
 	o_year,
 	sum(case
-		when nation = 'ARGENTINA' then volume
+		when nation = 'FRANCE' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -29,13 +29,12 @@ from
 			and o_custkey = c_custkey
 			and c_nationkey = n1.n_nationkey
 			and n1.n_regionkey = r_regionkey
-			and r_name = 'AMERICA'
+			and r_name = 'EUROPE'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'ECONOMY BURNISHED BRASS'
+			and p_type = 'STANDARD BRUSHED STEEL'
 	) as all_nations
 group by
 	o_year
 order by
-	o_year
-LIMIT 1;
+	o_year;

@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 6494 as a seed to the RNG
+-- using 25073 as a seed to the RNG
 
 
 explain select
@@ -12,9 +12,9 @@ from
 	part
 where
 	p_partkey = ps_partkey
-	and p_brand <> 'Brand#35'
-	and p_type not like 'PROMO PLATED%'
-	and p_size in (4, 9, 46, 42, 16, 6, 45, 17)
+	and p_brand <> 'Brand#41'
+	and p_type not like 'MEDIUM BURNISHED%'
+	and p_size in (47, 32, 24, 23, 43, 48, 37, 5)
 	and ps_suppkey not in (
 		select
 			s_suppkey

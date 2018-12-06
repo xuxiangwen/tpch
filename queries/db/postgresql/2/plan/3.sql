@@ -1,4 +1,4 @@
--- using 13137 as a seed to the RNG
+-- using 10040 as a seed to the RNG
 
 
 explain select
@@ -11,11 +11,11 @@ from
 	orders,
 	lineitem
 where
-	c_mktsegment = 'BUILDING'
+	c_mktsegment = 'MACHINERY'
 	and c_custkey = o_custkey
 	and l_orderkey = o_orderkey
-	and o_orderdate < date '1995-03-30'
-	and l_shipdate > date '1995-03-30'
+	and o_orderdate < date '1995-03-31'
+	and l_shipdate > date '1995-03-31'
 group by
 	l_orderkey,
 	o_orderdate,

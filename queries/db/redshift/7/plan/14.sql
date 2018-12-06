@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 28172 as a seed to the RNG
+-- using 21527 as a seed to the RNG
 
 
 explain select
@@ -13,6 +13,6 @@ from
 	part
 where
 	l_partkey = p_partkey
-	and l_shipdate >= date '1993-08-01'
-	and l_shipdate < date '1993-08-01' + interval '1 month'
+	and l_shipdate >= date '1997-05-01'
+	and l_shipdate < date '1997-05-01' + interval '1 month'
 LIMIT 1;

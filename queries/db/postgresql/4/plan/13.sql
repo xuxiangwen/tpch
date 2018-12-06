@@ -1,4 +1,4 @@
--- using 2214 as a seed to the RNG
+-- using 6807 as a seed to the RNG
 
 
 explain select
@@ -12,7 +12,7 @@ from
 		from
 			customer left outer join orders on
 				c_custkey = o_custkey
-				and o_comment not like '%unusual%requests%'
+				and o_comment not like '%pending%deposits%'
 		group by
 			c_custkey
 	) as c_orders 

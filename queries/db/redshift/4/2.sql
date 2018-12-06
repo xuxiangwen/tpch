@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 2214 as a seed to the RNG
+-- using 6807 as a seed to the RNG
 
 
 select
@@ -20,8 +20,8 @@ from
 where
 	p_partkey = ps_partkey
 	and s_suppkey = ps_suppkey
-	and p_size = 46
-	and p_type like '%BRASS'
+	and p_size = 21
+	and p_type like '%COPPER'
 	and s_nationkey = n_nationkey
 	and n_regionkey = r_regionkey
 	and r_name = 'ASIA'

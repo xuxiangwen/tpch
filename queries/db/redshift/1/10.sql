@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 32614 as a seed to the RNG
+-- using 10070 as a seed to the RNG
 
 
 select
@@ -19,8 +19,8 @@ from
 where
 	c_custkey = o_custkey
 	and l_orderkey = o_orderkey
-	and o_orderdate >= date '1994-02-01'
-	and o_orderdate < date '1994-02-01' + interval '3 months'
+	and o_orderdate >= date '1994-10-01'
+	and o_orderdate < date '1994-10-01' + interval '3 months'
 	and l_returnflag = 'R'
 	and c_nationkey = n_nationkey
 group by

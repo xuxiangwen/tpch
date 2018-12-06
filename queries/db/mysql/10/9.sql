@@ -1,4 +1,4 @@
--- using 12237 as a seed to the RNG
+-- using 5241 as a seed to the RNG
 
 
 select
@@ -25,12 +25,11 @@ from
 			and p_partkey = l_partkey
 			and o_orderkey = l_orderkey
 			and s_nationkey = n_nationkey
-			and p_name like '%sienna%'
+			and p_name like '%powder%'
 	) as profit
 group by
 	nation,
 	o_year
 order by
 	nation,
-	o_year desc
-LIMIT 1;
+	o_year desc;

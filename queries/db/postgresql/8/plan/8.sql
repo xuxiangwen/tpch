@@ -1,4 +1,4 @@
--- using 25816 as a seed to the RNG
+-- using 26078 as a seed to the RNG
 
 
 explain select
@@ -32,10 +32,9 @@ from
 			and r_name = 'AMERICA'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'STANDARD ANODIZED COPPER'
+			and p_type = 'PROMO PLATED STEEL'
 	) as all_nations
 group by
 	o_year
 order by
-	o_year
-LIMIT 1;
+	o_year;

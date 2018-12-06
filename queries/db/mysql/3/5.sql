@@ -1,4 +1,4 @@
--- using 6494 as a seed to the RNG
+-- using 25073 as a seed to the RNG
 
 
 select
@@ -24,5 +24,4 @@ where
 group by
 	n_name
 order by
-	revenue desc
-LIMIT 1;
+	revenue desc;

@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 13719 as a seed to the RNG
+-- using 26115 as a seed to the RNG
 
 
 explain select
@@ -8,8 +8,8 @@ explain select
 from
 	orders
 where
-	o_orderdate >= date '1993-02-01'
-	and o_orderdate < date '1993-02-01' + interval '3 months'
+	o_orderdate >= date '1994-01-01'
+	and o_orderdate < date '1994-01-01' + interval '3 months'
 	and exists (
 		select
 			*

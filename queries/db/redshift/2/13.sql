@@ -1,5 +1,5 @@
 set enable_result_cache_for_session to off;
--- using 13137 as a seed to the RNG
+-- using 10040 as a seed to the RNG
 
 
 select
@@ -13,7 +13,7 @@ from
 		from
 			customer left outer join orders on
 				c_custkey = o_custkey
-				and o_comment not like '%special%requests%'
+				and o_comment not like '%special%deposits%'
 		group by
 			c_custkey
 	) as c_orders 

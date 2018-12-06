@@ -1,4 +1,4 @@
--- using 22544 as a seed to the RNG
+-- using 22032 as a seed to the RNG
 
 
 explain select
@@ -21,8 +21,8 @@ where
 				from
 					lineitem
 				where
-					l_shipdate >= date '1996-01-01'
-					and l_shipdate < date '1996-01-01' + interval '1' year
+					l_shipdate >= date '1997-01-01'
+					and l_shipdate < date '1997-01-01' + interval '1' year
 				group by
 					l_partkey,
 					l_suppkey
@@ -36,12 +36,12 @@ where
 				from
 					part
 				where
-					p_name like 'saddle%'
+					p_name like 'beige%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'RUSSIA'
+	and n_name = 'INDIA'
 order by
 	s_name
 LIMIT 1;

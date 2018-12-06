@@ -1,11 +1,11 @@
 set enable_result_cache_for_session to off;
--- using 24993 as a seed to the RNG
+-- using 26478 as a seed to the RNG
 
 
 select
 	o_year,
 	sum(case
-		when nation = 'MOZAMBIQUE' then volume
+		when nation = 'IRAN' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -30,13 +30,12 @@ from
 			and o_custkey = c_custkey
 			and c_nationkey = n1.n_nationkey
 			and n1.n_regionkey = r_regionkey
-			and r_name = 'AFRICA'
+			and r_name = 'MIDDLE EAST'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'ECONOMY POLISHED NICKEL'
+			and p_type = 'ECONOMY POLISHED COPPER'
 	) as all_nations
 group by
 	o_year
 order by
-	o_year
-LIMIT 1;
+	o_year;
