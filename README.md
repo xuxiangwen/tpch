@@ -23,6 +23,36 @@ ll ./queries/db/redshift/2
 ll ./queries/db/mysql/2 
 ```
 
+生成的sql文件如下：
+
+```
+total 92
+-rw-rw-r--. 1 grid grid  575 Dec  5 11:36 10.sql
+-rw-rw-r--. 1 grid grid  556 Dec  5 11:36 11.sql
+-rw-rw-r--. 1 grid grid  642 Dec  5 11:36 12.sql
+-rw-rw-r--. 1 grid grid  395 Dec  5 11:36 13.sql
+-rw-rw-r--. 1 grid grid  377 Dec  5 11:36 14.sql
+-rw-rw-r--. 1 grid grid  576 Dec  5 11:36 15.sql
+-rw-rw-r--. 1 grid grid  532 Dec  5 11:36 16.sql
+-rw-rw-r--. 1 grid grid  393 Dec  5 11:36 17.sql
+-rw-rw-r--. 1 grid grid  499 Dec  5 11:36 18.sql
+-rw-rw-r--. 1 grid grid 1023 Dec  5 11:36 19.sql
+-rw-rw-r--. 1 grid grid  579 Dec  5 11:36 1.sql
+-rw-rw-r--. 1 grid grid  805 Dec  5 11:36 20.sql
+-rw-rw-r--. 1 grid grid  712 Dec  5 11:36 21.sql
+-rw-rw-r--. 1 grid grid  708 Dec  5 11:36 22.sql
+-rw-rw-r--. 1 grid grid  745 Dec  5 11:36 2.sql
+-rw-rw-r--. 1 grid grid  460 Dec  5 11:36 3.sql
+-rw-rw-r--. 1 grid grid  405 Dec  5 11:36 4.sql
+-rw-rw-r--. 1 grid grid  547 Dec  5 11:36 5.sql
+-rw-rw-r--. 1 grid grid  295 Dec  5 11:36 6.sql
+-rw-rw-r--. 1 grid grid  859 Dec  5 11:36 7.sql
+-rw-rw-r--. 1 grid grid  843 Dec  5 11:36 8.sql
+-rw-rw-r--. 1 grid grid  654 Dec  5 11:36 9.sql
+drwxrwxr-x. 2 grid grid 4096 Dec  5 11:36 plan
+```
+其中plan目录也包含了22个sql文件，只是这些sql文件包含了执行计划的部分，便于我们后期的分析。
+
 **检查查询条件**  
 希望每个batch生成的sql的filter都不完全相同。这样可以更加保证在性能测试时，更加符合实际的场景。
 
@@ -45,9 +75,23 @@ ll -h ./data/postgresql/1g
 ll -h ./data/redshift/1g
 ```
 
+生成的数据文件如下：
+```
+total 1.1G
+-rw-rw-r--. 1 grid grid  24M Dec  5 15:05 customer.tbl
+-rw-rw-r--. 1 grid grid 725M Dec  5 15:05 lineitem.tbl
+-rw-rw-r--. 1 grid grid 2.2K Dec  5 15:05 nation.tbl
+-rw-rw-r--. 1 grid grid 164M Dec  5 15:05 orders.tbl
+-rw-rw-r--. 1 grid grid 114M Dec  5 15:05 partsupp.tbl
+-rw-rw-r--. 1 grid grid  24M Dec  5 15:05 part.tbl
+-rw-rw-r--. 1 grid grid  389 Dec  5 15:05 region.tbl
+-rw-rw-r--. 1 grid grid 1.4M Dec  5 15:05 supplier.tbl
+```
+
 **上传数据到s3**  
 仅限于aws redshift数据。由于redshift只支持从s3上导入数据。
 ```
+./db/redshift/upload_s3.sh  '1 3 10 30'
 ```
 
 # 2. 数据库初始化
@@ -65,7 +109,7 @@ ll -h ./data/redshift/1g
 第一个参数可以设定哪些scale_factor的数据库创建新表。下面的命令中将会为tpch_1g, tpch_3g, tpch_10g, tpch_30g创建表。注意该命令会先drop table（如果表不存在的话，会有报错，但没有关系，可以忽略），然后再创建。
 ```
 ./db/postgresql/create_table.sh  '1 3 10 30'
-./db/redshift/create_table.sh  '1 3 10, 30'
+./db/redshift/create_table.sh  '1 3 10 30'
 ./db/mysql/create_table.sh '1 3 10 30'
 ```
 
@@ -78,11 +122,34 @@ ll -h ./data/redshift/1g
 
 ```
 
+以下是导入1g数据后，各个表的数据量。
+```
+ table_name |   cnt
+------------+---------
+ customer   |  150000
+ region     |       5
+ nation     |      25
+ supplier   |   10000
+ part       |  200000
+ partsupp   |  800000
+ orders     | 1500000
+ lineitem   | 6001215
+```
+
+导入10g数据，各个数据库需要的时间如下。其中aurora postgresql
+```
+ database   |   seconds
+------------+------------
+ postgresql |      244
+ mysql      |        5
+ redshift   |       25
+```
+
+
 ## 2.4 创建主键和索引
-第一个参数可以设定哪些scale_factor的数据库需要创建索引。注意要避免重复导入。由于mysql创建外键非常的缓慢，所以就放弃了外键，转而创建等效的索引。
+第一个参数可以设定哪些scale_factor的数据库需要创建索引。注意要避免重复导入。由于mysql创建外键非常的缓慢，所以就放弃了外键，转而创建等效的索引。redshift不需要创建主外键。
 ```
 ./db/postgresql/create_index.sh  '1 3'
-./db/redshift/create_index.sh  '1 3'
 ./db/mysql/create_index.sh '1 3'
 
 ```
@@ -148,11 +215,6 @@ local,postgresql,2018-12-05-23:17:38,tpch_1g,4,6,0.539
 local,postgresql,2018-12-05-23:17:38,tpch_1g,4,7,0.679
 
 ```
-
-
-
-
-
 
 
 
