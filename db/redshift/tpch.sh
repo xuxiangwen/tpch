@@ -7,7 +7,8 @@ source $script_path/tpch.conf
 
 scale=${1:-1}
 batch_id=${2:-1}
-query_id=${3}
+explain_plan=${3:-0}
+query_id=${4}
 
 output_path=$script_path/tpch.csv
 log_path=$script_path/tpch.log
@@ -29,10 +30,15 @@ fi
 while [ $i -lt $n ]
 do
   echo '-------------------------------------------------------' | tee -a $log_path
-  echo `date +%Y-%m-%d-%H:%M:%S`: run query $query_path/$batch_id/$i.sql  | tee -a $log_path
-  elasped_time="$(time (PGPASSWORD=$db_password psql -h $db_server -U $db_user -d tpch_${scale}g -p $db_port -f $query_path/$batch_id/$i.sql >> $log_path) 2>&1 )"
-  echo `date +%Y-%m-%d-%H:%M:%S`: elaspe_time = $elasped_time seconds | tee -a $log_path
-  echo "$instance,$database,$test_time,tpch_${scale}g,$batch_id,$i,$elasped_time" >> $output_path
+  if [ "$explain_plan" = "1" ] ; then 
+    echo `date +%Y-%m-%d-%H:%M:%S`: run query $query_path/$batch_id/plan/$i.sql  | tee -a $log_path
+    PGPASSWORD=$db_password psql -h $db_server -U $db_user -d tpch_${scale}g -p $db_port -f $query_path/$batch_id/plan/$i.sql >> $log_path
+  else
+    echo `date +%Y-%m-%d-%H:%M:%S`: run query $query_path/$batch_id/$i.sql  | tee -a $log_path
+    elasped_time="$(time (PGPASSWORD=$db_password psql -h $db_server -U $db_user -d tpch_${scale}g -p $db_port -f $query_path/$batch_id/$i.sql >> $log_path) 2>&1 )"
+    echo `date +%Y-%m-%d-%H:%M:%S`: elaspe_time = $elasped_time seconds | tee -a $log_path
+    echo "$instance,$database,$test_time,tpch_${scale}g,$batch_id,$i,$elasped_time" >> $output_path
+  fi
   i=`expr $i + 1`
 done
 echo '-------------------------------------------------------' | tee -a $log_path

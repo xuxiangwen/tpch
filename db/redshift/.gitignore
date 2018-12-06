@@ -5,6 +5,5 @@
 *.swp
 data
 model
-tpch.log
 history
 tpch.conf
