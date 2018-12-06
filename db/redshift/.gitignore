@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+.idea
+.env/*cd
+*.pyc
+*.swp
+data
+model
+tpch.log
