@@ -1,4 +1,4 @@
--- using 6558 as a seed to the RNG
+-- using 4691 as a seed to the RNG
 
 
 select
@@ -34,7 +34,7 @@ where
 			and l3.l_receiptdate > l3.l_commitdate
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'VIETNAM'
+	and n_name = 'MOZAMBIQUE'
 group by
 	s_name
 order by

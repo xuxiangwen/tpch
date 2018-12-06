@@ -1,4 +1,4 @@
--- using 31955 as a seed to the RNG
+-- using 19333 as a seed to the RNG
 
 
 explain select
@@ -14,8 +14,8 @@ where
 	c_mktsegment = 'AUTOMOBILE'
 	and c_custkey = o_custkey
 	and l_orderkey = o_orderkey
-	and o_orderdate < date '1995-03-18'
-	and l_shipdate > date '1995-03-18'
+	and o_orderdate < date '1995-03-31'
+	and l_shipdate > date '1995-03-31'
 group by
 	l_orderkey,
 	o_orderdate,

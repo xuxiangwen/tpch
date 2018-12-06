@@ -1,4 +1,4 @@
--- using 28345 as a seed to the RNG
+-- using 18890 as a seed to the RNG
 
 
 explain select
@@ -25,7 +25,7 @@ from
 			and p_partkey = l_partkey
 			and o_orderkey = l_orderkey
 			and s_nationkey = n_nationkey
-			and p_name like '%smoke%'
+			and p_name like '%goldenrod%'
 	) as profit
 group by
 	nation,

@@ -1,4 +1,4 @@
--- using 30265 as a seed to the RNG
+-- using 11583 as a seed to the RNG
 
 
 select
@@ -19,11 +19,11 @@ from
 where
 	p_partkey = ps_partkey
 	and s_suppkey = ps_suppkey
-	and p_size = 20
+	and p_size = 9
 	and p_type like '%NICKEL'
 	and s_nationkey = n_nationkey
 	and n_regionkey = r_regionkey
-	and r_name = 'AMERICA'
+	and r_name = 'AFRICA'
 	and ps_supplycost = (
 		select
 			min(ps_supplycost)
@@ -37,7 +37,7 @@ where
 			and s_suppkey = ps_suppkey
 			and s_nationkey = n_nationkey
 			and n_regionkey = r_regionkey
-			and r_name = 'AMERICA'
+			and r_name = 'AFRICA'
 	)
 order by
 	s_acctbal desc,

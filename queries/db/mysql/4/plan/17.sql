@@ -1,4 +1,4 @@
--- using 21227 as a seed to the RNG
+-- using 3433 as a seed to the RNG
 
 
 explain select
@@ -10,7 +10,7 @@ from
 where
 	p_partkey = l_partkey
 	and agg_partkey = l_partkey
-	and p_brand = 'Brand#34'
-	and p_container = 'WRAP BAG'
+	and p_brand = 'Brand#32'
+	and p_container = 'MED BAG'
 	and l_quantity < avg_quantity
 LIMIT 1;

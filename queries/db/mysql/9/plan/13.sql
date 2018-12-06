@@ -1,4 +1,4 @@
--- using 6558 as a seed to the RNG
+-- using 4691 as a seed to the RNG
 
 
 explain select
@@ -8,14 +8,14 @@ from
 	(
 		select
 			c_custkey,
-			count(o_orderkey)
+			count(o_orderkey) as c_count
 		from
 			customer left outer join orders on
 				c_custkey = o_custkey
-				and o_comment not like '%unusual%accounts%'
+				and o_comment not like '%special%deposits%'
 		group by
 			c_custkey
-	) as c_orders (c_custkey, c_count)
+	) as c_orders 
 group by
 	c_count
 order by
