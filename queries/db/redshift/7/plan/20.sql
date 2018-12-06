@@ -1,4 +1,5 @@
--- using 7708 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 28172 as a seed to the RNG
 
 
 explain select
@@ -36,12 +37,12 @@ where
 				from
 					part
 				where
-					p_name like 'white%'
+					p_name like 'ivory%'
 			)
 			and ps_availqty > agg_quantity
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'SAUDI ARABIA'
+	and n_name = 'MOZAMBIQUE'
 order by
 	s_name
 LIMIT 1;

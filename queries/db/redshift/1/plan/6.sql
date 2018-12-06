@@ -1,4 +1,5 @@
--- using 23431 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 32614 as a seed to the RNG
 
 
 explain select

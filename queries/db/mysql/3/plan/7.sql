@@ -1,4 +1,4 @@
--- using 18890 as a seed to the RNG
+-- using 6494 as a seed to the RNG
 
 
 explain select
@@ -27,8 +27,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'CHINA' and n2.n_name = 'RUSSIA')
-				or (n1.n_name = 'RUSSIA' and n2.n_name = 'CHINA')
+				(n1.n_name = 'JORDAN' and n2.n_name = 'INDIA')
+				or (n1.n_name = 'INDIA' and n2.n_name = 'JORDAN')
 			)
 			and l_shipdate between date '1995-01-01' and date '1996-12-31'
 	) as shipping

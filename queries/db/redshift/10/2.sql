@@ -1,4 +1,5 @@
--- using 11583 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 12237 as a seed to the RNG
 
 
 select
@@ -19,11 +20,11 @@ from
 where
 	p_partkey = ps_partkey
 	and s_suppkey = ps_suppkey
-	and p_size = 9
-	and p_type like '%NICKEL'
+	and p_size = 18
+	and p_type like '%TIN'
 	and s_nationkey = n_nationkey
 	and n_regionkey = r_regionkey
-	and r_name = 'AFRICA'
+	and r_name = 'ASIA'
 	and ps_supplycost = (
 		select
 			min(ps_supplycost)
@@ -37,7 +38,7 @@ where
 			and s_suppkey = ps_suppkey
 			and s_nationkey = n_nationkey
 			and n_regionkey = r_regionkey
-			and r_name = 'AFRICA'
+			and r_name = 'ASIA'
 	)
 order by
 	s_acctbal desc,

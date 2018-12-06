@@ -1,10 +1,11 @@
--- using 11583 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 12237 as a seed to the RNG
 
 
 select
 	o_year,
 	sum(case
-		when nation = 'GERMANY' then volume
+		when nation = 'JORDAN' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -29,10 +30,10 @@ from
 			and o_custkey = c_custkey
 			and c_nationkey = n1.n_nationkey
 			and n1.n_regionkey = r_regionkey
-			and r_name = 'EUROPE'
+			and r_name = 'MIDDLE EAST'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'LARGE BURNISHED BRASS'
+			and p_type = 'PROMO ANODIZED TIN'
 	) as all_nations
 group by
 	o_year

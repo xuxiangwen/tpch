@@ -1,4 +1,5 @@
--- using 3433 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 2214 as a seed to the RNG
 
 
 select
@@ -14,8 +15,8 @@ where
 	c_mktsegment = 'FURNITURE'
 	and c_custkey = o_custkey
 	and l_orderkey = o_orderkey
-	and o_orderdate < date '1995-03-31'
-	and l_shipdate > date '1995-03-31'
+	and o_orderdate < date '1995-03-17'
+	and l_shipdate > date '1995-03-17'
 group by
 	l_orderkey,
 	o_orderdate,

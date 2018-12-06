@@ -1,4 +1,5 @@
--- using 90 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 13137 as a seed to the RNG
 
 
 explain select
@@ -25,7 +26,7 @@ from
 			and p_partkey = l_partkey
 			and o_orderkey = l_orderkey
 			and s_nationkey = n_nationkey
-			and p_name like '%burlywood%'
+			and p_name like '%bisque%'
 	) as profit
 group by
 	nation,

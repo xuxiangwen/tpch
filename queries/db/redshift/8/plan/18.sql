@@ -1,4 +1,5 @@
--- using 19746 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 25816 as a seed to the RNG
 
 
 explain select
@@ -20,7 +21,7 @@ where
 			lineitem
 		group by
 			l_orderkey having
-				sum(l_quantity) > 315
+				sum(l_quantity) > 313
 	)
 	and c_custkey = o_custkey
 	and o_orderkey = l_orderkey

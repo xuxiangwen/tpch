@@ -1,4 +1,5 @@
--- using 11583 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 12237 as a seed to the RNG
 
 
 select
@@ -11,9 +12,9 @@ from
 	part
 where
 	p_partkey = ps_partkey
-	and p_brand <> 'Brand#51'
-	and p_type not like 'STANDARD POLISHED%'
-	and p_size in (12, 38, 45, 9, 16, 1, 25, 17)
+	and p_brand <> 'Brand#52'
+	and p_type not like 'PROMO ANODIZED%'
+	and p_size in (48, 40, 4, 18, 39, 30, 8, 24)
 	and ps_suppkey not in (
 		select
 			s_suppkey

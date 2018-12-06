@@ -1,10 +1,10 @@
--- using 4691 as a seed to the RNG
+-- using 24993 as a seed to the RNG
 
 
 explain select
 	o_year,
 	sum(case
-		when nation = 'KENYA' then volume
+		when nation = 'MOZAMBIQUE' then volume
 		else 0
 	end) / sum(volume) as mkt_share
 from
@@ -32,7 +32,7 @@ from
 			and r_name = 'AFRICA'
 			and s_nationkey = n2.n_nationkey
 			and o_orderdate between date '1995-01-01' and date '1996-12-31'
-			and p_type = 'LARGE BRUSHED NICKEL'
+			and p_type = 'ECONOMY POLISHED NICKEL'
 	) as all_nations
 group by
 	o_year

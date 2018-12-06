@@ -1,4 +1,5 @@
--- using 3433 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 2214 as a seed to the RNG
 
 
 explain select
@@ -34,7 +35,7 @@ where
 			and l3.l_receiptdate > l3.l_commitdate
 	)
 	and s_nationkey = n_nationkey
-	and n_name = 'PERU'
+	and n_name = 'JAPAN'
 group by
 	s_name
 order by

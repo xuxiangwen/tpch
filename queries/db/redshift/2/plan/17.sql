@@ -1,4 +1,5 @@
--- using 90 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 13137 as a seed to the RNG
 
 
 explain select
@@ -10,7 +11,7 @@ from
 where
 	p_partkey = l_partkey
 	and agg_partkey = l_partkey
-	and p_brand = 'Brand#43'
-	and p_container = 'SM CASE'
+	and p_brand = 'Brand#15'
+	and p_container = 'SM PACK'
 	and l_quantity < avg_quantity
 LIMIT 1;

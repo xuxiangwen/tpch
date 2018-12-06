@@ -1,4 +1,5 @@
--- using 19746 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 25816 as a seed to the RNG
 
 
 select
@@ -10,7 +11,7 @@ from
 where
 	p_partkey = l_partkey
 	and agg_partkey = l_partkey
-	and p_brand = 'Brand#15'
-	and p_container = 'WRAP BAG'
+	and p_brand = 'Brand#42'
+	and p_container = 'MED DRUM'
 	and l_quantity < avg_quantity
 LIMIT 1;

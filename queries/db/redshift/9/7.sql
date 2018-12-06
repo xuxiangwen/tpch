@@ -1,4 +1,5 @@
--- using 4691 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 24993 as a seed to the RNG
 
 
 select
@@ -27,8 +28,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'JORDAN' and n2.n_name = 'KENYA')
-				or (n1.n_name = 'KENYA' and n2.n_name = 'JORDAN')
+				(n1.n_name = 'VIETNAM' and n2.n_name = 'MOZAMBIQUE')
+				or (n1.n_name = 'MOZAMBIQUE' and n2.n_name = 'VIETNAM')
 			)
 			and l_shipdate between date '1995-01-01' and date '1996-12-31'
 	) as shipping

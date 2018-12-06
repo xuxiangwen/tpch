@@ -1,4 +1,5 @@
--- using 3433 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 2214 as a seed to the RNG
 
 
 select
@@ -27,8 +28,8 @@ from
 			and s_nationkey = n1.n_nationkey
 			and c_nationkey = n2.n_nationkey
 			and (
-				(n1.n_name = 'JORDAN' and n2.n_name = 'ALGERIA')
-				or (n1.n_name = 'ALGERIA' and n2.n_name = 'JORDAN')
+				(n1.n_name = 'ALGERIA' and n2.n_name = 'UNITED STATES')
+				or (n1.n_name = 'UNITED STATES' and n2.n_name = 'ALGERIA')
 			)
 			and l_shipdate between date '1995-01-01' and date '1996-12-31'
 	) as shipping

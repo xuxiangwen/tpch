@@ -1,4 +1,4 @@
--- using 7708 as a seed to the RNG
+-- using 28172 as a seed to the RNG
 
 
 explain select
@@ -11,7 +11,7 @@ from
 where
 	ps_suppkey = s_suppkey
 	and s_nationkey = n_nationkey
-	and n_name = 'MOZAMBIQUE'
+	and n_name = 'UNITED STATES'
 group by
 	ps_partkey having
 		sum(ps_supplycost * ps_availqty) > (
@@ -24,7 +24,7 @@ group by
 			where
 				ps_suppkey = s_suppkey
 				and s_nationkey = n_nationkey
-				and n_name = 'MOZAMBIQUE'
+				and n_name = 'UNITED STATES'
 		)
 order by
 	value desc

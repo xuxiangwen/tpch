@@ -1,4 +1,5 @@
--- using 1284 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 22544 as a seed to the RNG
 
 
 explain select
@@ -11,7 +12,7 @@ from
 where
 	ps_suppkey = s_suppkey
 	and s_nationkey = n_nationkey
-	and n_name = 'UNITED KINGDOM'
+	and n_name = 'CHINA'
 group by
 	ps_partkey having
 		sum(ps_supplycost * ps_availqty) > (
@@ -24,7 +25,7 @@ group by
 			where
 				ps_suppkey = s_suppkey
 				and s_nationkey = n_nationkey
-				and n_name = 'UNITED KINGDOM'
+				and n_name = 'CHINA'
 		)
 order by
 	value desc

@@ -1,4 +1,5 @@
--- using 1284 as a seed to the RNG
+set enable_result_cache_for_session to off;
+-- using 22544 as a seed to the RNG
 
 
 explain select
@@ -12,7 +13,7 @@ from
 		from
 			customer left outer join orders on
 				c_custkey = o_custkey
-				and o_comment not like '%pending%accounts%'
+				and o_comment not like '%pending%packages%'
 		group by
 			c_custkey
 	) as c_orders 
