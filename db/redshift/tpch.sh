@@ -5,19 +5,26 @@ script_path=$(dirname "$script")
 
 source $script_path/tpch.conf
 
-scale=${1:-1}
-batch_id=${2:-1}
-explain_plan=${3:-0}
-query_id=${4}
+usage() { 
+	echo "Usage: $0 [-s <1|3|10|30>] [-b <1|2|3|4>] [-c] [-e] [-q <1}2}3>]" 1>&2
+	exit 1
+}
 
-output_path=$script_path/tpch.csv
-log_path=$script_path/tpch.log
+while getopts "s:b:ceq:" opt
+do
+  case $opt in
+    s) scale=$OPTARG ;;
+    b) batch_id=$OPTARG ;;
+    c) clear_cache=1 ;;
+    e) explain_plan=1 ;;	
+    q) query_id=$OPTARG ;;   	  
+    *) usage ;;
+  esac
+done
 
-TIMEFORMAT=%3R
-
-echo '=========================================================' >> $log_path
-test_time=`date +%Y-%m-%d-%H:%M:%S`
-echo $test_time: start tpc-h with batch_id=$batch_id on tpch_${scale}g | tee -a $log_path
+if [ -z "${scale}" ] || [ -z "${batch_id}" ]; then
+    usage
+fi
 
 if [ "$query_id" = "" ] ; then
   i=1
@@ -27,10 +34,28 @@ else
   n=`expr $query_id + 1`
 fi
 
+output_path=$script_path/tpch.csv
+log_path=$script_path/tpch.log
+
+TIMEFORMAT=%3R
+echo '=========================================================' >> $log_path
+echo scale=$scale
+echo batch_id=$batch_id
+echo clear_cache=$clear_cache
+echo explain_plan=$explain_plan
+echo query_id=$query_id
+
+test_time=`date +%Y-%m-%d-%H:%M:%S`
+echo $test_time: start tpc-h with batch_id=$batch_id on tpch_${scale}g | tee -a $log_path
+
+if [ "$clear_cache" = "1" ] ; then
+  $script_path/clear_cache.sh
+fi
+
 while [ $i -lt $n ]
 do
   echo '-------------------------------------------------------' | tee -a $log_path
-  if [ "$explain_plan" = "1" ] ; then 
+  if [ "$explain_plan" = "1" ] ; then
     echo `date +%Y-%m-%d-%H:%M:%S`: run query $query_path/$batch_id/plan/$i.sql  | tee -a $log_path
     PGPASSWORD=$db_password psql -h $db_server -U $db_user -d tpch_${scale}g -p $db_port -f $query_path/$batch_id/plan/$i.sql >> $log_path
   else
