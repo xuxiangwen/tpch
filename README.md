@@ -175,14 +175,7 @@ EOF
  lineitem   | 6001215
 ```
 
-导入10g数据，各个数据库需要的时间如下。其中aurora postgresql
-```
- database   |   seconds
-------------+------------
- postgresql |      244
- mysql      |        5
- redshift   |       25
-```
+
 
 
 ## 2.5 创建主键和索引
