@@ -305,10 +305,10 @@ mysql, postgresql的硬件配置如下。
 
 **成本比较**
 
-```math
-dc2.large  \approx db.r4.large      
+```
+dc2.large  相近 db.r4.large      
 
-2*dc2.large  \approx db.r4.xlarge     
+2*dc2.large  相近 db.r4.xlarge     
 ```
 
 
