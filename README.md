@@ -290,7 +290,7 @@ local,postgresql,2018-12-05-23:17:38,tpch_1g,4,7,0.679
 ## 4.1 测试环境
 比较了redshift, aurora-mysql（下面直接称mysql）, aurora-postgresql(下面直接称postgresql)在成本相似硬件下的性能。
 
-reshift的硬件如下，我们选用了1个节点和2个节点进行测试。
+reshift的硬件如下，我们选用了1个节点和2个节点进行测试。 
 
 | 节点大小        | vCPU | ECU | RAM (GiB) | 每节点的切片数 | 每节点的存储容量        |
 |-------------|------|-----|-----------|---------|-----------------|
@@ -305,15 +305,11 @@ mysql, postgresql的硬件配置如下。
 
 **成本比较**
 
-```
-dc2.large  相近 db.r4.large      
-
-2*dc2.large  相近 db.r4.xlarge     
-```
-
-
+- dc2.large的成本和 db.r4.large相当  
+- 2*dc2.large的成本和 db.r4.xlarge相当   
 
 ## 4.2 分析结果
+
 - redshift在3g及3g以上数据量情况下，性能比mysql和postgresql好很多。而在1g的数据量下，mysql和postgresql大多数情况下更加有优势。
 
 实际在db.r4.large的配置下，mysql和postgresql无法完成10g数据量的测试。
