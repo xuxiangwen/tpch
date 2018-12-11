@@ -438,6 +438,25 @@ mysql, postgresql的硬件配置如下。
 - 10g及以上: 必须redshift
 
 
+# 备注
+## A. 数据加载速度
+
+从结果上看，redshift的加载速度无疑是最快的。mysql有些过慢了。
+
+| data volume | database   | instance  | load_data (minute) | create_index (minute) | create_index (include foreigin key) | total (minute) |
+|-------------|------------|-----------|--------------------|-----------------------|-------------------------------------|----------------|
+| 1g          | mysql      | r4.large  | 2.8                | 3.8                   |                                     | 6.6            |
+| 3g          | mysql      | r4.large  | 8.3                | 13.9                  |                                     | 22.2           |
+| 10g         | mysql      | r4.large  | 28                 | 72                    |                                     | 100            |
+| 1g          | postgresql | r4.large  | 0.9                | 0.8                   |                                     | 1.7            |
+| 3g          | postgresql | r4.large  | 2.6                | 2.5                   |                                     | 5.1            |
+| 10g         | postgresql | r4.large  | 8.4                | 12.1                  |                                     | 20.5           |
+| 1g          | redshift   | dc2.large | 4.9                | 0                     |                                     | 4.9            |
+| 3g          | redshift   | dc2.large | 2.4                | 0                     |                                     | 2.4            |
+| 10g         | redshift   | dc2.large | 6.9                | 0                     |                                     | 6.9            |
+| 30g         | redshift   | dc2.large | 18.5               | 0                     |                                     | 18.5           |
+
+
 
 
 
