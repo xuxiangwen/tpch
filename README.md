@@ -62,11 +62,17 @@ drwxrwxr-x. 2 grid grid 4096 Dec  5 11:36 plan
 
 ## 1.2 生成数据
 
-第一个参数可以设定需要的scale_factor的列表
+对于redshift的数据，我们采用了lzo压缩方式，所以需要用如下命令安装lzop。如果不使用redshift，可以忽略这一步。
+```
+yum install -y lzop
+```
+
+第一个参数可以设定需要的scale_factor的列表。
 ```
 ./dbgen.sh '1 3 10'
 ```
 程序中会生成postgresql, mysql, redshift的数据，如果需要生成其他数据库的数据，可以对dgben.sh里面的内容做一些修改。这三个数据库的数据，其中mysql是最先生成的，postgresql会在mysql数据的基础上删除每行最后一个"|"，而redshift会在postgresql的基础上，压缩成lzo文件。
+
 
 **检查生成的数据**  
 ```
@@ -87,6 +93,7 @@ total 1.1G
 -rw-rw-r--. 1 grid grid  389 Dec  5 15:05 region.tbl
 -rw-rw-r--. 1 grid grid 1.4M Dec  5 15:05 supplier.tbl
 ```
+
 
 **上传数据到s3**  
 仅限于aws redshift数据。由于redshift只支持从s3上导入数据。
