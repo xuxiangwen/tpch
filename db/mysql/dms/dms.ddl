@@ -57,7 +57,7 @@ CREATE TABLE `caseinfo` (
   `detailCategory` varchar(50) DEFAULT NULL,
   `cnf` varchar(50) DEFAULT NULL,
   `qa` text,
-  `pn` varchar(50) DEFAULT NULL COMMENT '产品号',
+  `pn` varchar(50) DEFAULT NULL,
   `sn` varchar(50) DEFAULT NULL,
   `productType` varchar(50) DEFAULT NULL,
   `productLine` varchar(50) DEFAULT NULL,
