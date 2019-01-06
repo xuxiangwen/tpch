@@ -46,8 +46,6 @@
         "Severity": "LOGGER_SEVERITY_DEBUG"
       }
     ],
-    "CloudWatchLogGroup": "dms-tasks-dms-wechat",
-    "CloudWatchLogStream": "dms-task-customer-service-prod-all"
   },
   "ControlTablesSettings": {
     "historyTimeslotInMinutes": 5,
@@ -91,8 +89,8 @@
   },
   "ChangeProcessingTuning": {
     "BatchApplyPreserveTransaction": true,
-    "BatchApplyTimeoutMin": 1,
-    "BatchApplyTimeoutMax": 30,
+    "BatchApplyTimeoutMin": 600,
+    "BatchApplyTimeoutMax": 3600,
     "BatchApplyMemoryLimit": 500,
     "BatchSplitSize": 0,
     "MinTransactionSize": 1000,

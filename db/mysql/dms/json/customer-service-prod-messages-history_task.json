@@ -46,8 +46,6 @@
         "Severity": "LOGGER_SEVERITY_DEBUG"
       }
     ],
-    "CloudWatchLogGroup": "dms-tasks-dms-wechat",
-    "CloudWatchLogStream": "dms-task-customer-service-prod-messages-history"
   },
   "ControlTablesSettings": {
     "historyTimeslotInMinutes": 5,

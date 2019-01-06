@@ -1,25 +1,3 @@
-# !/bin/bash
-script=$(readlink -f "$0")
-script_path=$(dirname "$script")
-
-source $script_path/dms.conf
-
-oldIFS=$IFS
-IFS=,
-
-for task_id in $tasks
-do
-
-if [ "${task_id:0:3}" = "cdc"  ]; then
-  BatchApplyTimeoutMin=1200
-  BatchApplyTimeoutMax=2400
-else
-  BatchApplyTimeoutMin=1
-  BatchApplyTimeoutMax=30
-fi
-
-
-cat << EOF > $script_path/json/${task_id}_task.json
 {
   "TargetMetadata": {
     "TargetSchema": "",
@@ -111,8 +89,8 @@ cat << EOF > $script_path/json/${task_id}_task.json
   },
   "ChangeProcessingTuning": {
     "BatchApplyPreserveTransaction": true,
-    "BatchApplyTimeoutMin": $BatchApplyTimeoutMin,
-    "BatchApplyTimeoutMax": $BatchApplyTimeoutMax,
+    "BatchApplyTimeoutMin": 1200,
+    "BatchApplyTimeoutMax": 2400,
     "BatchApplyMemoryLimit": 500,
     "BatchSplitSize": 0,
     "MinTransactionSize": 1000,
@@ -122,8 +100,3 @@ cat << EOF > $script_path/json/${task_id}_task.json
     "StatementCacheSize": 50
   }
 }
-EOF
-
-done
-IFS=$oldIFS
-ls -l  $script_path/json
