@@ -9,8 +9,8 @@ TPC-H是OLAP应用标准的benchmark， 在数据库选型，升级时经常用�
 # 1. 数据准备
 ## 1.1 配置数据库参数
 ### 修改db.conf
-- 修改db.conf中db_server的值。
-- 替换db.conf中的db_admin_password的值。
+- 修改db_server的值。
+- 修改db_admin_password的值。
 ```
 vim db/mysql/db.conf
 vim db/postgresql/db.conf
@@ -42,7 +42,7 @@ vim db/mysql/dss.db
 vim db/postgresql/dss.db
 vim db/redshift/dss.db
 ```
-以db/mysql/db.db。
+以db/mysql/db.db为例。
 ```
 drop database tpch_1g;
 drop database tpch_3g;
