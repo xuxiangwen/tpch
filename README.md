@@ -7,7 +7,67 @@ TPC-H是OLAP应用标准的benchmark， 在数据库选型，升级时经常用�
 2. 并发的查询。目前版本还没有考虑。
 
 # 1. 数据准备
-## 1.1 生成查询
+## 1.1 配置数据库参数
+替换db.conf中的'**REMOVED***'为实际的密码。
+```
+vim db/mysql/db.conf
+vim db/postgresql/db.conf
+vim db/redshift/db.conf
+```
+以db/mysql/db.conf为例。
+```
+export database=mysql
+export instance=local
+
+export db_type=mysql
+export db_server=aa00
+export db_admin_user=root
+export db_admin_password=***REMOVED***
+export db_name=mysql
+export db_port=3306
+export db_user=tpch
+export db_password=***REMOVED***
+
+export base_path=~/eipi10/tpch
+export data_path=$base_path/data/$db_type
+export query_path=$base_path/queries/db/$db_type
+```
+
+修改dss.db中的'**REMOVED***'为实际的密码。
+```
+vim db/mysql/dss.db
+vim db/postgresql/dss.db
+vim db/redshift/dss.db
+```
+以db/mysql/db.db。
+```
+drop database tpch_1g;
+drop database tpch_3g;
+drop database tpch_10g;
+drop database tpch_30g;
+drop database tpch_100g;
+drop user tpch;
+
+CREATE USER 'tpch'@'%' IDENTIFIED BY '***REMOVED***';
+
+CREATE DATABASE tpch_1g;
+CREATE DATABASE tpch_3g;
+CREATE DATABASE tpch_10g;
+CREATE DATABASE tpch_30g;
+CREATE DATABASE tpch_100g;
+
+GRANT ALL ON tpch_1g.* to 'tpch'@'%';
+GRANT ALL ON tpch_3g.* to 'tpch'@'%';
+GRANT ALL ON tpch_10g.* to 'tpch'@'%';
+GRANT ALL ON tpch_30g.* to 'tpch'@'%';
+GRANT ALL ON tpch_100g.* to 'tpch'@'%';
+-- GRANT LOAD FROM S3 ON *.* TO 'tpch'@'%';
+
+show databases;
+show grants for tpch;
+```
+
+## 1.2 生成查询
 生成多个batch的sql查询语句。第一个参数是指batch的数量。一般在性能测试中，会进行多batch的测试，这样可以保证结果的稳定性（每个batch中，同编号的sql的一些过滤条件不同，这样可以减少cache的命中）。测试之前，我们预先实现生成了每个batch的查询，这样更加方便来进行比较和分析。
 
 ```
@@ -60,7 +120,7 @@ drwxrwxr-x. 2 grid grid 4096 Dec  5 11:36 plan
 ./check_query.sh
 ```
 
-## 1.2 生成数据
+## 1.3 生成数据
 
 对于redshift的数据，我们采用了lzo压缩方式，所以需要用如下命令安装lzop。如果不使用redshift，可以忽略这一步。
 ```
