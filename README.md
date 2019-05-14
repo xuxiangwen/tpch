@@ -8,7 +8,8 @@ TPC-H是OLAP应用标准的benchmark， 在数据库选型，升级时经常用�
 
 # 1. 数据准备
 ## 1.1 配置数据库参数
-替换db.conf中的'**REMOVED***'为实际的密码。
+- 修改db.conf中db_server的值。
+- 替换db.conf中的'**REMOVED***'为实际的密码。
 ```
 vim db/mysql/db.conf
 vim db/postgresql/db.conf
